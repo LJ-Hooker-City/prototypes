@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulma Demo · Keystone Inspections</title>
+  <!-- Bulma 1.0 (loaded from the internet). Styles only, no JavaScript included. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <style>
+    .label-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: #7a7a7a; margin-bottom: .6rem; }
+    .demo-cell { background: hsl(171, 100%, 92%); border-radius: 8px; padding: .8rem; text-align: center; font-size: .85rem; }
+    .emoji-fig { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3rem; background: linear-gradient(135deg, #d1fae5, #e0f2fe); }
+  </style>
+</head>
+<body>
+
+  <!-- Framework info bar (part of the explorer, not the demo site) -->
+  <div class="has-background-dark has-text-white is-size-7 py-2">
+    <div class="container px-4 is-flex is-flex-wrap-wrap is-justify-content-space-between" style="gap:.5rem">
+      <span>You're viewing <strong class="has-text-white">Bulma 1.0</strong>: simple, readable, styles only.</span>
+      <a href="../index.html" class="has-text-white" style="text-decoration:underline">← Back to all frameworks</a>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <nav class="navbar has-shadow" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold" href="#">🏠 Keystone Inspections</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNav" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#services">Services</a>
+          <a class="navbar-item" href="#pricing">Pricing</a>
+          <a class="navbar-item" href="#report">Sample Report</a>
+          <a class="navbar-item" href="#book">Contact</a>
+          <div class="navbar-item"><a class="button is-primary" href="#book">Book an Inspection</a></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero is-primary is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-7">
+            <span class="tag is-light mb-4">Lorem ipsum dolor</span>
+            <h1 class="title is-1">Lorem ipsum dolor sit amet consectetur</h1>
+            <p class="subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa.</p>
+            <div class="buttons">
+              <a href="#book" class="button is-white is-medium">Book an Inspection</a>
+              <a href="#report" class="button is-white is-outlined is-medium">View Sample Report</a>
+            </div>
+          </div>
+          <div class="column is-5">
+            <div class="box">
+              <p class="has-text-weight-semibold mb-3 has-text-dark">Lorem ipsum</p>
+              <ul class="has-text-dark">
+                <li class="py-1">✅ Lorem ipsum dolor sit</li>
+                <li class="py-1">✅ Consectetur adipiscing elit</li>
+                <li class="py-1">✅ Sed do eiusmod tempor</li>
+                <li class="py-1">✅ Ut labore et dolore magna</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="title is-3">Our Services</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="is-size-1">🏡</p>
+                <p class="title is-5">Home Inspection</p>
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante dapibus diam.</div>
+              </div>
+              <footer class="card-footer"><a href="#" class="card-footer-item">Learn more</a></footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="is-size-1">📋</p>
+                <p class="title is-5">Pre-Listing Inspection</p>
+                <div class="content">Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum praesent mauris fusce nec tellus sed augue semper porta.</div>
+              </div>
+              <footer class="card-footer"><a href="#" class="card-footer-item">Learn more</a></footer>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height:100%">
+              <div class="card-content">
+                <p class="is-size-1">🔍</p>
+                <p class="title is-5">Radon, Mold &amp; Termite</p>
+                <div class="content">Mauris massa vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</div>
+              </div>
+              <footer class="card-footer"><a href="#" class="card-footer-item">Learn more</a></footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing table -->
+    <section id="pricing" class="section pt-0">
+      <div class="container">
+        <h2 class="title is-3">Pricing</h2>
+        <div class="table-container">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead><tr><th>Package</th><th>Description</th><th>Home size</th><th>Price</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Essential</strong></td><td>Lorem ipsum dolor sit amet consectetur</td><td>Up to 1,500 sq ft</td><td>$350</td></tr>
+              <tr><td><strong>Standard</strong> <span class="tag is-success">Popular</span></td><td>Sed ut perspiciatis unde omnis iste</td><td>1,500–3,000 sq ft</td><td>$475</td></tr>
+              <tr><td><strong>Premium</strong></td><td>Nemo enim ipsam voluptatem quia voluptas</td><td>3,000+ sq ft</td><td>$625</td></tr>
+              <tr><td><strong>Add-on: Radon</strong> <span class="tag is-warning">New</span></td><td>Neque porro quisquam est qui dolorem</td><td>Any</td><td>$150</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample report -->
+    <section id="report" class="section pt-0">
+      <div class="container">
+        <h2 class="title is-3">Sample Report</h2>
+        <div class="box">
+          <div class="tabs">
+            <ul>
+              <li class="is-active" data-tab="t-summary"><a>Summary</a></li>
+              <li data-tab="t-roof"><a>Roof</a></li>
+              <li data-tab="t-electrical"><a>Electrical</a></li>
+            </ul>
+          </div>
+          <div id="t-summary" class="panel-tab">
+            <p class="mb-2">Report progress</p>
+            <progress class="progress is-primary" value="75" max="100">75%</progress>
+            <div class="notification is-success is-light">✅ <strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="notification is-warning is-light">⚠️ <strong>Monitor:</strong> sed do eiusmod tempor incididunt ut labore.</div>
+            <div class="notification is-danger is-light">🛠️ <strong>Repair:</strong> ut enim ad minim veniam, quis nostrud exercitation.</div>
+          </div>
+          <div id="t-roof" class="panel-tab is-hidden"><p><span class="tag is-warning">Monitor</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+          <div id="t-electrical" class="panel-tab is-hidden"><p><span class="tag is-success">Pass</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
+        </div>
+        <button class="button" id="openModal">Open a pop-up (modal)</button>
+      </div>
+    </section>
+
+    <!-- Booking form -->
+    <section id="book" class="section pt-0">
+      <div class="container">
+        <h2 class="title is-3">Book an Inspection</h2>
+        <form class="box" id="bookForm">
+          <div class="columns is-multiline">
+            <div class="column is-6"><div class="field"><label class="label">Full name</label><div class="control"><input class="input" placeholder="Lorem Ipsum"></div></div></div>
+            <div class="column is-6"><div class="field"><label class="label">Email</label><div class="control"><input class="input" type="email" placeholder="lorem@ipsum.com"></div></div></div>
+            <div class="column is-12"><div class="field"><label class="label">Property address</label><div class="control"><input class="input" placeholder="123 Lorem Street"></div></div></div>
+            <div class="column is-6"><div class="field"><label class="label">Property type</label><div class="control"><div class="select is-fullwidth"><select><option>Single-family home</option><option>Condo / Townhouse</option><option>Multi-family</option><option>Commercial</option></select></div></div></div></div>
+            <div class="column is-6"><div class="field"><label class="label">Preferred date</label><div class="control"><input class="input" type="date"></div></div></div>
+            <div class="column is-12"><div class="field"><label class="label">Add-ons</label>
+              <div class="checkboxes"><label class="checkbox"><input type="checkbox"> Radon</label><label class="checkbox"><input type="checkbox"> Mold</label><label class="checkbox"><input type="checkbox"> Termite</label></div>
+            </div></div>
+            <div class="column is-12"><div class="field"><label class="label">Notes</label><div class="control"><textarea class="textarea" rows="3" placeholder="Lorem ipsum dolor sit amet..."></textarea></div></div></div>
+            <div class="column is-12"><button class="button is-primary is-medium">Request Inspection</button></div>
+          </div>
+          <div id="formMsg" class="notification is-info is-light is-hidden">This is a demo form. Nothing was sent.</div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Layout & Containers showcase ===== -->
+    <section id="layout" class="section pt-0">
+      <div class="container">
+        <h2 class="title is-3 mb-2">Layout &amp; Containers</h2>
+        <p class="has-text-grey mb-5">The grey labels show Bulma's name for each piece. Use those names when you ask your AI for changes.</p>
+
+        <!-- Columns -->
+        <p class="label-tag">Columns</p>
+        <div class="columns is-mobile is-variable is-1 mb-1"><div class="column is-half"><div class="demo-cell">is-half</div></div><div class="column is-half"><div class="demo-cell">is-half</div></div></div>
+        <div class="columns is-mobile is-variable is-1 mb-1"><div class="column is-one-third"><div class="demo-cell">is-one-third</div></div><div class="column is-one-third"><div class="demo-cell">is-one-third</div></div><div class="column is-one-third"><div class="demo-cell">is-one-third</div></div></div>
+        <div class="columns is-mobile is-variable is-1 mb-1"><div class="column"><div class="demo-cell">auto</div></div><div class="column"><div class="demo-cell">auto</div></div><div class="column"><div class="demo-cell">auto</div></div><div class="column"><div class="demo-cell">auto</div></div></div>
+        <div class="columns is-mobile is-variable is-1 mb-5"><div class="column is-two-thirds"><div class="demo-cell">is-two-thirds</div></div><div class="column"><div class="demo-cell">rest</div></div></div>
+
+        <!-- Grid -->
+        <p class="label-tag">Grid (Bulma 1.0's newer layout tool)</p>
+        <div class="fixed-grid has-3-cols has-1-cols-mobile mb-5">
+          <div class="grid">
+            <div class="cell is-col-span-2"><div class="demo-cell">cell is-col-span-2</div></div>
+            <div class="cell is-row-span-2"><div class="demo-cell" style="height:100%;display:grid;place-items:center">cell is-row-span-2</div></div>
+            <div class="cell"><div class="demo-cell">cell</div></div>
+            <div class="cell"><div class="demo-cell">cell</div></div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <p class="label-tag">Card: different styles</p>
+        <div class="columns is-multiline mb-5">
+          <div class="column is-6-tablet is-3-desktop">
+            <div class="card" style="height:100%">
+              <div class="card-image"><div class="emoji-fig">🏘️</div></div>
+              <div class="card-content"><p class="is-size-7 has-text-grey">card-image</p><p class="title is-5">Lorem ipsum</p><p>Dolor sit amet, consectetur adipiscing elit sed do.</p></div>
+            </div>
+          </div>
+          <div class="column is-6-tablet is-3-desktop">
+            <div class="card" style="height:100%">
+              <header class="card-header"><p class="card-header-title">card-header</p></header>
+              <div class="card-content"><p class="title is-5">Lorem ipsum</p><p>Ut enim ad minim veniam, quis nostrud exercitation.</p></div>
+              <footer class="card-footer"><a href="#" class="card-footer-item">Save</a><a href="#" class="card-footer-item">Share</a></footer>
+            </div>
+          </div>
+          <div class="column is-6-tablet is-3-desktop">
+            <div class="box has-background-primary-light" style="height:100%">
+              <p class="is-size-7 has-text-grey">box (colored)</p><p class="title is-5">Lorem ipsum</p><p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+          </div>
+          <div class="column is-6-tablet is-3-desktop">
+            <div class="box" style="height:100%; border:2px solid hsl(153,53%,53%)">
+              <p class="is-size-7 has-text-grey">box (outlined)</p><p class="title is-5 has-text-success">Lorem ipsum</p><p>Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media object + level -->
+        <div class="columns mb-5">
+          <div class="column is-7">
+            <p class="label-tag">Media object (great for profiles &amp; reviews)</p>
+            <div class="box">
+              <article class="media">
+                <figure class="media-left"><p class="image is-64x64 has-background-warning-light is-flex is-align-items-center is-justify-content-center is-size-2" style="border-radius:50%">👷</p></figure>
+                <div class="media-content">
+                  <div class="content"><p><strong>Lorem Ipsum</strong> <small>Inspector</small><br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p></div>
+                </div>
+              </article>
+              <article class="media">
+                <figure class="media-left"><p class="image is-48x48 has-background-info-light is-flex is-align-items-center is-justify-content-center is-size-4" style="border-radius:50%">🙂</p></figure>
+                <div class="media-content"><div class="content"><p><strong>Dolor Sitamet</strong> <small>★★★★★</small><br>"Nulla facilisi. Sed ut perspiciatis unde omnis iste natus."</p></div></div>
+              </article>
+            </div>
+          </div>
+          <div class="column is-5">
+            <p class="label-tag">Level (stats row)</p>
+            <div class="box">
+              <nav class="level is-mobile">
+                <div class="level-item has-text-centered"><div><p class="heading">Lorem</p><p class="title is-4">2,400+</p></div></div>
+                <div class="level-item has-text-centered"><div><p class="heading">Ipsum</p><p class="title is-4">24h</p></div></div>
+                <div class="level-item has-text-centered"><div><p class="heading">Dolor</p><p class="title is-4">4.9★</p></div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <p class="label-tag">Message</p>
+        <div class="columns mb-5">
+          <div class="column"><article class="message is-info"><div class="message-header"><p>Lorem ipsum</p></div><div class="message-body">Dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut.</div></article></div>
+          <div class="column"><article class="message is-warning"><div class="message-header"><p>Dolor sit</p></div><div class="message-body">Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus.</div></article></div>
+          <div class="column"><article class="message is-success"><div class="message-body">A message with no header. Curabitur blandit tempus porttitor nullam quis risus.</div></article></div>
+        </div>
+
+        <!-- Menu + panel -->
+        <p class="label-tag">Sidebar layout · Menu · Panel</p>
+        <div class="columns mb-5">
+          <div class="column is-3">
+            <aside class="menu box">
+              <p class="menu-label">Lorem</p>
+              <ul class="menu-list"><li><a class="is-active">Lorem ipsum</a></li><li><a>Dolor sit amet</a></li></ul>
+              <p class="menu-label">Ipsum</p>
+              <ul class="menu-list"><li><a>Consectetur</a></li><li><a>Adipiscing elit</a></li></ul>
+            </aside>
+          </div>
+          <div class="column is-5">
+            <nav class="panel is-primary">
+              <p class="panel-heading">Panel</p>
+              <div class="panel-block"><p class="control"><input class="input" type="text" placeholder="Search lorem ipsum"></p></div>
+              <p class="panel-tabs"><a class="is-active">All</a><a>Pass</a><a>Repair</a></p>
+              <a class="panel-block">🏠&nbsp; Lorem ipsum dolor</a>
+              <a class="panel-block">🔌&nbsp; Consectetur adipiscing</a>
+              <a class="panel-block">🚿&nbsp; Sed do eiusmod</a>
+            </nav>
+          </div>
+          <div class="column is-4">
+            <div class="box content">
+              <p class="label-tag">Content (styled text)</p>
+              <h4>Lorem ipsum</h4>
+              <p>Dolor sit amet, <strong>consectetur</strong> adipiscing elit.</p>
+              <ul><li>Lorem ipsum dolor</li><li>Sit amet consectetur</li></ul>
+              <blockquote>Lorem ipsum dolor sit amet.</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breadcrumb + pagination -->
+        <p class="label-tag">Breadcrumb · Pagination</p>
+        <div class="box is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center" style="gap:1rem">
+          <nav class="breadcrumb mb-0"><ul><li><a href="#">Home</a></li><li><a href="#">Reports</a></li><li class="is-active"><a href="#">Lorem Ipsum St.</a></li></ul></nav>
+          <nav class="pagination is-small mb-0"><ul class="pagination-list"><li><a class="pagination-link is-current">1</a></li><li><a class="pagination-link">2</a></li><li><a class="pagination-link">3</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link">9</a></li></ul></nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Button gallery -->
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="title is-3">Buttons &amp; Tags</h2>
+        <div class="buttons">
+          <button class="button is-primary">Primary</button>
+          <button class="button is-link">Link</button>
+          <button class="button is-success">Success</button>
+          <button class="button is-warning">Warning</button>
+          <button class="button is-danger">Danger</button>
+          <button class="button is-dark is-outlined">Outlined</button>
+          <button class="button is-primary is-light">Light</button>
+          <button class="button is-rounded">Rounded</button>
+        </div>
+        <div class="tags">
+          <span class="tag is-success">Pass</span>
+          <span class="tag is-warning">Monitor</span>
+          <span class="tag is-danger">Repair</span>
+          <span class="tag is-info is-rounded">Licensed</span>
+          <span class="tag is-dark is-rounded">Insured</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prompts for the AI agent (part of the explorer, not the demo site) -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="box has-background-light">
+          <h2 class="title is-4">💡 Try this with your AI agent</h2>
+          <p class="has-text-grey mb-4">Copy a prompt and paste it into your AI coding agent.</p>
+          <div class="box is-flex is-align-items-center mb-3" style="gap:1rem" data-prompt><code class="prompt-text is-flex-grow-1" style="background:none;white-space:normal">Make a copy of the Bulma page with a deep blue and orange color scheme instead of the teal.</code><button class="button is-small copy">Copy</button></div>
+          <div class="box is-flex is-align-items-center mb-3" style="gap:1rem" data-prompt><code class="prompt-text is-flex-grow-1" style="background:none;white-space:normal">Make a copy of the Bulma page in dark mode. Bulma 1.0 has dark mode built in.</code><button class="button is-small copy">Copy</button></div>
+          <div class="box is-flex is-align-items-center mb-3" style="gap:1rem" data-prompt><code class="prompt-text is-flex-grow-1" style="background:none;white-space:normal">Using Bulma, make a "Meet the inspectors" page that uses media objects and cards for each person.</code><button class="button is-small copy">Copy</button></div>
+          <div class="box is-flex is-align-items-center" style="gap:1rem" data-prompt><code class="prompt-text is-flex-grow-1" style="background:none;white-space:normal">Make a copy of the Bulma page with a simpler layout: just the hero, services and booking form, with bigger text.</code><button class="button is-small copy">Copy</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head"><p class="modal-card-title">Lorem ipsum</p><button class="delete closeModal" aria-label="close"></button></header>
+      <section class="modal-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bulma provides the look of this pop-up, but a few lines of JavaScript open and close it.</section>
+      <footer class="modal-card-foot"><div class="buttons"><button class="button is-primary closeModal">Got it</button><button class="button closeModal">Close</button></div></footer>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container is-flex is-flex-wrap-wrap is-justify-content-space-between is-size-7" style="gap:.5rem">
+      <span>© 2026 Keystone Inspections · Lorem ipsum dolor sit amet</span>
+      <span>Built with Bulma 1.0</span>
+    </div>
+  </footer>
+
+  <script>
+    // Bulma is styles only, so these small scripts power the menu, tabs, pop-up and form.
+    document.querySelectorAll('.navbar-burger').forEach(function (b) {
+      b.onclick = function () { b.classList.toggle('is-active'); document.getElementById(b.dataset.target).classList.toggle('is-active'); };
+    });
+    document.querySelectorAll('.tabs li').forEach(function (tab) {
+      tab.onclick = function () {
+        document.querySelectorAll('.tabs li').forEach(function (t) { t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        document.querySelectorAll('.panel-tab').forEach(function (p) { p.classList.add('is-hidden'); });
+        document.getElementById(tab.dataset.tab).classList.remove('is-hidden');
+      };
+    });
+    var modal = document.getElementById('modal');
+    document.getElementById('openModal').onclick = function () { modal.classList.add('is-active'); };
+    document.querySelectorAll('.closeModal, .modal-background').forEach(function (b) { b.onclick = function () { modal.classList.remove('is-active'); }; });
+    document.getElementById('bookForm').onsubmit = function (e) { e.preventDefault(); document.getElementById('formMsg').classList.remove('is-hidden'); };
+
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.closest('[data-prompt]').querySelector('.prompt-text').innerText;
+        var done = function () { var o = btn.textContent; btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = o; }, 1500); };
+        if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done); }
+        else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); }
+      });
+    });
+  </script>
+  <!-- 🎨 Style picker: change fonts, colours and borders (explorer tool, delete this line to remove) -->
+  <script src="../shared/style-picker.js" data-framework="bulma"></script>
+</body>
+</html>

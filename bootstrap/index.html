@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Demo · Keystone Inspections</title>
+  <!-- Bootstrap 5 (loaded from the internet) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Framework info bar (part of the explorer, not the demo site) -->
+  <div class="bg-dark text-white small py-2">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>You're viewing <strong>Bootstrap 5</strong>: the most popular CSS framework.</span>
+      <a href="../index.html" class="link-light">← Back to all frameworks</a>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🏠 Keystone Inspections</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#report">Sample Report</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">Contact</a></li>
+        </ul>
+        <a href="#book" class="btn btn-primary ms-lg-3">Book an Inspection</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="py-5 bg-primary-subtle">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="badge text-bg-primary mb-3">Lorem ipsum dolor</span>
+          <h1 class="display-4 fw-bold">Lorem ipsum dolor sit amet consectetur</h1>
+          <p class="lead text-body-secondary">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#book" class="btn btn-primary btn-lg">Book an Inspection</a>
+            <a href="#report" class="btn btn-outline-primary btn-lg">View Sample Report</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Lorem ipsum</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">✅ Lorem ipsum dolor sit</li>
+                <li class="list-group-item">✅ Consectetur adipiscing elit</li>
+                <li class="list-group-item">✅ Sed do eiusmod tempor</li>
+                <li class="list-group-item">✅ Ut labore et dolore magna</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-5">
+
+    <!-- Services -->
+    <section id="services" class="mb-5">
+      <h2 class="fw-bold mb-4">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="fs-1">🏡</div>
+              <h5 class="card-title">Home Inspection</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante dapibus diam.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="fs-1">📋</div>
+              <h5 class="card-title">Pre-Listing Inspection</h5>
+              <p class="card-text">Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum praesent mauris fusce nec tellus sed augue semper porta.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="fs-1">🔍</div>
+              <h5 class="card-title">Radon, Mold &amp; Termite</h5>
+              <p class="card-text">Mauris massa vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing table -->
+    <section id="pricing" class="mb-5">
+      <h2 class="fw-bold mb-4">Pricing</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+          <thead class="table-light">
+            <tr><th>Package</th><th>Description</th><th>Home size</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Essential</strong></td><td>Lorem ipsum dolor sit amet consectetur</td><td>Up to 1,500 sq ft</td><td>$350</td></tr>
+            <tr><td><strong>Standard</strong> <span class="badge text-bg-success">Popular</span></td><td>Sed ut perspiciatis unde omnis iste</td><td>1,500–3,000 sq ft</td><td>$475</td></tr>
+            <tr><td><strong>Premium</strong></td><td>Nemo enim ipsam voluptatem quia voluptas</td><td>3,000+ sq ft</td><td>$625</td></tr>
+            <tr><td><strong>Add-on: Radon</strong> <span class="badge text-bg-warning">New</span></td><td>Neque porro quisquam est qui dolorem</td><td>Any</td><td>$150</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sample report: tabs, alerts, badges, progress -->
+    <section id="report" class="mb-5">
+      <h2 class="fw-bold mb-4">Sample Report</h2>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-summary" type="button" role="tab">Summary</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-roof" type="button" role="tab">Roof</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-electrical" type="button" role="tab">Electrical</button></li>
+      </ul>
+      <div class="tab-content border border-top-0 rounded-bottom p-4">
+        <div class="tab-pane fade show active" id="tab-summary" role="tabpanel">
+          <p>Report progress</p>
+          <div class="progress mb-4" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 75%">75%</div>
+          </div>
+          <div class="alert alert-success">✅ <strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="alert alert-warning">⚠️ <strong>Monitor:</strong> sed do eiusmod tempor incididunt ut labore.</div>
+          <div class="alert alert-danger mb-0">🛠️ <strong>Repair:</strong> ut enim ad minim veniam, quis nostrud exercitation.</div>
+        </div>
+        <div class="tab-pane fade" id="tab-roof" role="tabpanel">
+          <p><span class="badge text-bg-warning">Monitor</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="tab-pane fade" id="tab-electrical" role="tabpanel">
+          <p><span class="badge text-bg-success">Pass</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline-secondary mt-3" data-bs-toggle="modal" data-bs-target="#demoModal">Open a pop-up (modal)</button>
+    </section>
+
+    <!-- Booking form -->
+    <section id="book" class="mb-5">
+      <h2 class="fw-bold mb-4">Book an Inspection</h2>
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <form onsubmit="event.preventDefault(); alertBox.classList.remove('d-none');">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label" for="name">Full name</label><input class="form-control" id="name" placeholder="Lorem Ipsum"></div>
+              <div class="col-md-6"><label class="form-label" for="email">Email</label><input class="form-control" id="email" type="email" placeholder="lorem@ipsum.com"></div>
+              <div class="col-12"><label class="form-label" for="address">Property address</label><input class="form-control" id="address" placeholder="123 Lorem Street"></div>
+              <div class="col-md-6">
+                <label class="form-label" for="type">Property type</label>
+                <select class="form-select" id="type"><option>Single-family home</option><option>Condo / Townhouse</option><option>Multi-family</option><option>Commercial</option></select>
+              </div>
+              <div class="col-md-6"><label class="form-label" for="date">Preferred date</label><input class="form-control" id="date" type="date"></div>
+              <div class="col-12">
+                <label class="form-label d-block">Add-ons</label>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="a1"><label class="form-check-label" for="a1">Radon</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="a2"><label class="form-check-label" for="a2">Mold</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="a3"><label class="form-check-label" for="a3">Termite</label></div>
+              </div>
+              <div class="col-12"><label class="form-label" for="notes">Notes</label><textarea class="form-control" id="notes" rows="3" placeholder="Lorem ipsum dolor sit amet..."></textarea></div>
+              <div class="col-12"><button class="btn btn-primary btn-lg" type="submit">Request Inspection</button></div>
+            </div>
+          </form>
+          <div id="alertBox" class="alert alert-info mt-3 d-none">This is a demo form. Nothing was sent.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Layout & Containers showcase ===== -->
+    <section id="layout" class="mb-5">
+      <h2 class="fw-bold mb-1">Layout &amp; Containers</h2>
+      <p class="text-body-secondary mb-4">The grey labels show Bootstrap's name for each piece. Use those names when you ask your AI for changes.</p>
+
+      <!-- Grid -->
+      <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Grid: rows &amp; columns</p>
+      <div class="row g-2 mb-2 text-center small">
+        <div class="col-6"><div class="p-3 bg-primary-subtle rounded">col-6 (half)</div></div>
+        <div class="col-6"><div class="p-3 bg-primary-subtle rounded">col-6 (half)</div></div>
+      </div>
+      <div class="row g-2 mb-2 text-center small">
+        <div class="col-4"><div class="p-3 bg-primary-subtle rounded">col-4 (third)</div></div>
+        <div class="col-4"><div class="p-3 bg-primary-subtle rounded">col-4 (third)</div></div>
+        <div class="col-4"><div class="p-3 bg-primary-subtle rounded">col-4 (third)</div></div>
+      </div>
+      <div class="row g-2 mb-2 text-center small">
+        <div class="col-3"><div class="p-3 bg-primary-subtle rounded">col-3</div></div>
+        <div class="col-3"><div class="p-3 bg-primary-subtle rounded">col-3</div></div>
+        <div class="col-3"><div class="p-3 bg-primary-subtle rounded">col-3</div></div>
+        <div class="col-3"><div class="p-3 bg-primary-subtle rounded">col-3</div></div>
+      </div>
+      <div class="row g-2 mb-5 text-center small">
+        <div class="col-8"><div class="p-3 bg-primary-subtle rounded">col-8 (two thirds)</div></div>
+        <div class="col-4"><div class="p-3 bg-primary-subtle rounded">col-4</div></div>
+      </div>
+
+      <!-- Card variations -->
+      <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Cards: different styles</p>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-img-top d-flex align-items-center justify-content-center fs-1" style="height:140px;background:linear-gradient(135deg,#cfe2ff,#d1e7dd)">🏘️</div>
+            <div class="card-body">
+              <h6 class="small text-body-secondary">Card with image</h6>
+              <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Dolor sit amet, consectetur adipiscing elit sed do.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-header">Card header</div>
+            <div class="card-body">
+              <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+            <div class="card-footer text-body-secondary small">Card footer · 2 days ago</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-bg-primary">
+            <div class="card-body">
+              <h6 class="small opacity-75">Colored card</h6>
+              <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-success border-2">
+            <div class="card-body">
+              <h6 class="small text-body-secondary">Outlined card</h6>
+              <h5 class="card-title text-success">Lorem ipsum</h5>
+              <p class="card-text">Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-7">
+          <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Horizontal card</p>
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-4 d-flex align-items-center justify-content-center fs-1 rounded-start" style="background:linear-gradient(135deg,#fff3cd,#f8d7da)">👷</div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">Lorem Ipsum, Inspector</h5>
+                  <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+                  <p class="card-text"><small class="text-body-secondary">Lorem ipsum dolor</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Card group (joined cards)</p>
+          <div class="card-group">
+            <div class="card text-center"><div class="card-body"><div class="fs-3 fw-bold">2,400+</div><small class="text-body-secondary">Lorem ipsum</small></div></div>
+            <div class="card text-center"><div class="card-body"><div class="fs-3 fw-bold">24h</div><small class="text-body-secondary">Dolor sit</small></div></div>
+            <div class="card text-center"><div class="card-body"><div class="fs-3 fw-bold">4.9★</div><small class="text-body-secondary">Amet elit</small></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Blockquote (testimonials)</p>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6">
+          <figure class="p-4 bg-body-tertiary rounded-3 border-start border-4 border-primary h-100 mb-0">
+            <blockquote class="blockquote"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</p></blockquote>
+            <figcaption class="blockquote-footer mb-0">Lorem Ipsum, <cite>first-time buyer</cite></figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <figure class="p-4 bg-body-tertiary rounded-3 border-start border-4 border-primary h-100 mb-0">
+            <blockquote class="blockquote"><p>"Nulla facilisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem."</p></blockquote>
+            <figcaption class="blockquote-footer mb-0">Dolor Sitamet, <cite>real estate agent</cite></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Sidebar layout with list group + accordion -->
+      <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Sidebar layout · List group · Accordion</p>
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">Lorem ipsum</a>
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">Dolor sit amet <span class="badge text-bg-primary rounded-pill">4</span></a>
+            <a href="#" class="list-group-item list-group-item-action">Consectetur</a>
+            <a href="#" class="list-group-item list-group-item-action">Adipiscing elit</a>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">Lorem ipsum dolor sit amet?</button></h2>
+              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Ut enim ad minim veniam?</button></h2>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Duis aute irure dolor?</button></h2>
+              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation helpers -->
+      <p class="small text-uppercase fw-semibold text-body-secondary mb-2">Breadcrumb · Pagination</p>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 p-3 border rounded-3">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"><a href="#">Home</a></li><li class="breadcrumb-item"><a href="#">Reports</a></li><li class="breadcrumb-item active">Lorem Ipsum St.</li></ol></nav>
+        <nav aria-label="pages"><ul class="pagination mb-0"><li class="page-item disabled"><a class="page-link">Previous</a></li><li class="page-item active"><a class="page-link" href="#">1</a></li><li class="page-item"><a class="page-link" href="#">2</a></li><li class="page-item"><a class="page-link" href="#">3</a></li><li class="page-item"><a class="page-link" href="#">Next</a></li></ul></nav>
+      </div>
+    </section>
+
+    <!-- Button gallery -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-4">Buttons &amp; Badges</h2>
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-outline-dark">Outline</button>
+        <button class="btn btn-link">Link</button>
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge text-bg-success">Pass</span>
+        <span class="badge text-bg-warning">Monitor</span>
+        <span class="badge text-bg-danger">Repair</span>
+        <span class="badge rounded-pill text-bg-info">Licensed</span>
+        <span class="badge rounded-pill text-bg-dark">Insured</span>
+      </div>
+    </section>
+
+    <!-- Prompts for the AI agent (part of the explorer, not the demo site) -->
+    <section class="p-4 rounded-3 bg-body-secondary">
+      <h2 class="h4 fw-bold">💡 Try this with your AI agent</h2>
+      <p class="text-body-secondary">Copy a prompt and paste it into your AI coding agent.</p>
+      <div class="vstack gap-2">
+        <div class="d-flex gap-3 align-items-center bg-body p-3 rounded" data-prompt><span class="prompt-text flex-grow-1 font-monospace small">Make a copy of the Bootstrap page with a dark navy and gold color scheme so it feels more premium.</span><button class="btn btn-sm btn-outline-primary copy">Copy</button></div>
+        <div class="d-flex gap-3 align-items-center bg-body p-3 rounded" data-prompt><span class="prompt-text flex-grow-1 font-monospace small">Make a copy of the Bootstrap page that adds a photo background to the top section and a customer reviews section.</span><button class="btn btn-sm btn-outline-primary copy">Copy</button></div>
+        <div class="d-flex gap-3 align-items-center bg-body p-3 rounded" data-prompt><span class="prompt-text flex-grow-1 font-monospace small">Make a copy of the Bootstrap page in dark mode. Bootstrap has dark mode built in.</span><button class="btn btn-sm btn-outline-primary copy">Copy</button></div>
+        <div class="d-flex gap-3 align-items-center bg-body p-3 rounded" data-prompt><span class="prompt-text flex-grow-1 font-monospace small">Using Bootstrap, make a new page that looks like an inspector's dashboard showing today's appointments.</span><button class="btn btn-sm btn-outline-primary copy">Copy</button></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title">Lorem ipsum</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a Bootstrap modal, a pop-up window built into the framework.</div>
+        <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" data-bs-dismiss="modal">Got it</button></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container d-flex flex-wrap justify-content-between gap-2 small">
+      <span>© 2026 Keystone Inspections · Lorem ipsum dolor sit amet</span>
+      <span>Built with Bootstrap 5</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.closest('[data-prompt]').querySelector('.prompt-text').innerText;
+        var done = function () { var o = btn.textContent; btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = o; }, 1500); };
+        if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done); }
+        else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); }
+      });
+    });
+  </script>
+  <!-- 🎨 Style picker: change fonts, colours and borders (explorer tool, delete this line to remove) -->
+  <script src="../shared/style-picker.js" data-framework="bootstrap"></script>
+</body>
+</html>

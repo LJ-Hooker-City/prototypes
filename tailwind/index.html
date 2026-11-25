@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tailwind Demo · Keystone Inspections</title>
+  <!-- Tailwind CSS 4 browser build (loaded from the internet). Good for prototypes. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Framework info bar (part of the explorer, not the demo site) -->
+  <div class="bg-slate-900 text-slate-200 text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex flex-wrap justify-between gap-2">
+      <span>You're viewing <strong class="text-white">Tailwind CSS 4</strong>: every detail is designed by hand.</span>
+      <a href="../index.html" class="underline hover:text-white">← Back to all frameworks</a>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <nav class="bg-white/80 backdrop-blur border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg tracking-tight">🏠 Keystone <span class="text-sky-600">Inspections</span></a>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu">☰</button>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#services" class="hover:text-sky-600">Services</a>
+        <a href="#pricing" class="hover:text-sky-600">Pricing</a>
+        <a href="#report" class="hover:text-sky-600">Sample Report</a>
+        <a href="#book" class="hover:text-sky-600">Contact</a>
+        <a href="#book" class="bg-sky-600 text-white px-4 py-2 rounded-full hover:bg-sky-700 transition">Book an Inspection</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 space-y-2 text-sm font-medium bg-white">
+      <a href="#services" class="block">Services</a>
+      <a href="#pricing" class="block">Pricing</a>
+      <a href="#report" class="block">Sample Report</a>
+      <a href="#book" class="block">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-100 via-white to-emerald-50"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-sky-700 bg-sky-100 rounded-full px-3 py-1 mb-5">Lorem ipsum dolor</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">Lorem ipsum dolor sit amet <span class="text-sky-600">consectetur</span></h1>
+        <p class="mt-6 text-lg text-slate-600 max-w-xl">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#book" class="bg-sky-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg shadow-sky-600/20 hover:bg-sky-700 transition">Book an Inspection</a>
+          <a href="#report" class="bg-white border border-slate-300 font-semibold px-6 py-3 rounded-full hover:border-sky-600 hover:text-sky-700 transition">View Sample Report</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-3xl shadow-xl ring-1 ring-slate-200 p-6">
+          <h2 class="font-semibold mb-4">Lorem ipsum</h2>
+          <ul class="divide-y divide-slate-100">
+            <li class="py-3 flex items-center gap-3"><span class="size-6 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 text-xs">✓</span>Lorem ipsum dolor sit</li>
+            <li class="py-3 flex items-center gap-3"><span class="size-6 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 text-xs">✓</span>Consectetur adipiscing elit</li>
+            <li class="py-3 flex items-center gap-3"><span class="size-6 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 text-xs">✓</span>Sed do eiusmod tempor</li>
+            <li class="py-3 flex items-center gap-3"><span class="size-6 grid place-items-center rounded-full bg-emerald-100 text-emerald-700 text-xs">✓</span>Ut labore et dolore magna</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-16 space-y-20">
+
+    <!-- Services -->
+    <section id="services">
+      <h2 class="text-3xl font-bold tracking-tight mb-8">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="group bg-white rounded-2xl p-6 ring-1 ring-slate-200 hover:ring-sky-400 hover:-translate-y-1 hover:shadow-lg transition">
+          <div class="text-4xl mb-4">🏡</div>
+          <h3 class="font-semibold text-lg">Home Inspection</h3>
+          <p class="mt-2 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante dapibus diam.</p>
+          <a href="#" class="mt-4 inline-block text-sky-600 font-medium group-hover:underline">Learn more →</a>
+        </div>
+        <div class="group bg-white rounded-2xl p-6 ring-1 ring-slate-200 hover:ring-sky-400 hover:-translate-y-1 hover:shadow-lg transition">
+          <div class="text-4xl mb-4">📋</div>
+          <h3 class="font-semibold text-lg">Pre-Listing Inspection</h3>
+          <p class="mt-2 text-slate-600">Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum praesent mauris fusce nec tellus sed augue semper porta.</p>
+          <a href="#" class="mt-4 inline-block text-sky-600 font-medium group-hover:underline">Learn more →</a>
+        </div>
+        <div class="group bg-white rounded-2xl p-6 ring-1 ring-slate-200 hover:ring-sky-400 hover:-translate-y-1 hover:shadow-lg transition">
+          <div class="text-4xl mb-4">🔍</div>
+          <h3 class="font-semibold text-lg">Radon, Mold &amp; Termite</h3>
+          <p class="mt-2 text-slate-600">Mauris massa vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+          <a href="#" class="mt-4 inline-block text-sky-600 font-medium group-hover:underline">Learn more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing table -->
+    <section id="pricing">
+      <h2 class="text-3xl font-bold tracking-tight mb-8">Pricing</h2>
+      <div class="overflow-x-auto bg-white rounded-2xl ring-1 ring-slate-200">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-50 text-slate-500 uppercase text-xs tracking-wider">
+            <tr><th class="px-6 py-4">Package</th><th class="px-6 py-4">Description</th><th class="px-6 py-4">Home size</th><th class="px-6 py-4">Price</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="hover:bg-sky-50/50"><td class="px-6 py-4 font-semibold">Essential</td><td class="px-6 py-4 text-slate-600">Lorem ipsum dolor sit amet consectetur</td><td class="px-6 py-4">Up to 1,500 sq ft</td><td class="px-6 py-4 font-semibold">$350</td></tr>
+            <tr class="hover:bg-sky-50/50"><td class="px-6 py-4 font-semibold">Standard <span class="ml-1 text-xs font-medium bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5">Popular</span></td><td class="px-6 py-4 text-slate-600">Sed ut perspiciatis unde omnis iste</td><td class="px-6 py-4">1,500–3,000 sq ft</td><td class="px-6 py-4 font-semibold">$475</td></tr>
+            <tr class="hover:bg-sky-50/50"><td class="px-6 py-4 font-semibold">Premium</td><td class="px-6 py-4 text-slate-600">Nemo enim ipsam voluptatem quia voluptas</td><td class="px-6 py-4">3,000+ sq ft</td><td class="px-6 py-4 font-semibold">$625</td></tr>
+            <tr class="hover:bg-sky-50/50"><td class="px-6 py-4 font-semibold">Add-on: Radon <span class="ml-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full px-2 py-0.5">New</span></td><td class="px-6 py-4 text-slate-600">Neque porro quisquam est qui dolorem</td><td class="px-6 py-4">Any</td><td class="px-6 py-4 font-semibold">$150</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sample report: tabs, alerts, badges, progress -->
+    <section id="report">
+      <h2 class="text-3xl font-bold tracking-tight mb-8">Sample Report</h2>
+      <div class="bg-white rounded-2xl ring-1 ring-slate-200">
+        <div class="flex gap-1 border-b border-slate-200 px-4 pt-3" role="tablist">
+          <button class="tab px-4 py-2 text-sm font-medium border-b-2 border-sky-600 text-sky-700" data-tab="t-summary">Summary</button>
+          <button class="tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800" data-tab="t-roof">Roof</button>
+          <button class="tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800" data-tab="t-electrical">Electrical</button>
+        </div>
+        <div class="p-6">
+          <div id="t-summary" class="panel space-y-3">
+            <p class="text-sm font-medium">Report progress</p>
+            <div class="h-3 bg-slate-100 rounded-full overflow-hidden mb-6"><div class="h-full w-3/4 bg-gradient-to-r from-sky-500 to-emerald-500 rounded-full"></div></div>
+            <div class="rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 px-4 py-3">✅ <strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="rounded-xl bg-amber-50 text-amber-800 border border-amber-200 px-4 py-3">⚠️ <strong>Monitor:</strong> sed do eiusmod tempor incididunt ut labore.</div>
+            <div class="rounded-xl bg-rose-50 text-rose-800 border border-rose-200 px-4 py-3">🛠️ <strong>Repair:</strong> ut enim ad minim veniam, quis nostrud exercitation.</div>
+          </div>
+          <div id="t-roof" class="panel hidden"><p><span class="text-xs font-medium bg-amber-100 text-amber-800 rounded-full px-2 py-0.5">Monitor</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+          <div id="t-electrical" class="panel hidden"><p><span class="text-xs font-medium bg-emerald-100 text-emerald-700 rounded-full px-2 py-0.5">Pass</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
+        </div>
+      </div>
+      <button id="openModal" class="mt-4 border border-slate-300 bg-white px-4 py-2 rounded-full text-sm font-medium hover:border-slate-500">Open a pop-up (modal)</button>
+    </section>
+
+    <!-- Booking form -->
+    <section id="book">
+      <h2 class="text-3xl font-bold tracking-tight mb-8">Book an Inspection</h2>
+      <form id="bookForm" class="bg-white rounded-2xl ring-1 ring-slate-200 p-6 sm:p-8 grid sm:grid-cols-2 gap-5">
+        <label class="block"><span class="text-sm font-medium">Full name</span><input class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Lorem Ipsum"></label>
+        <label class="block"><span class="text-sm font-medium">Email</span><input type="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="lorem@ipsum.com"></label>
+        <label class="block sm:col-span-2"><span class="text-sm font-medium">Property address</span><input class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="123 Lorem Street"></label>
+        <label class="block"><span class="text-sm font-medium">Property type</span>
+          <select class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500"><option>Single-family home</option><option>Condo / Townhouse</option><option>Multi-family</option><option>Commercial</option></select>
+        </label>
+        <label class="block"><span class="text-sm font-medium">Preferred date</span><input type="date" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"></label>
+        <fieldset class="sm:col-span-2"><legend class="text-sm font-medium mb-2">Add-ons</legend>
+          <div class="flex flex-wrap gap-5">
+            <label class="flex items-center gap-2"><input type="checkbox" class="size-4 accent-sky-600"> Radon</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="size-4 accent-sky-600"> Mold</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="size-4 accent-sky-600"> Termite</label>
+          </div>
+        </fieldset>
+        <label class="block sm:col-span-2"><span class="text-sm font-medium">Notes</span><textarea rows="3" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Lorem ipsum dolor sit amet..."></textarea></label>
+        <div class="sm:col-span-2"><button class="bg-sky-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-sky-700 transition">Request Inspection</button></div>
+        <p id="formMsg" class="hidden sm:col-span-2 rounded-xl bg-sky-50 text-sky-800 border border-sky-200 px-4 py-3">This is a demo form. Nothing was sent.</p>
+      </form>
+    </section>
+
+    <!-- ===== Layout & Containers showcase ===== -->
+    <section id="layout" class="space-y-12">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight">Layout &amp; Containers</h2>
+        <p class="text-slate-500 mt-1">Tailwind has no named components, so every piece here is built from small style classes. The grey labels give each pattern a common name you can use with your AI.</p>
+      </div>
+
+      <!-- Grid -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Grid: columns</p>
+        <div class="space-y-2 text-center text-sm text-sky-900">
+          <div class="grid grid-cols-2 gap-2"><div class="bg-sky-100 rounded-lg p-3">grid-cols-2</div><div class="bg-sky-100 rounded-lg p-3">half</div></div>
+          <div class="grid grid-cols-3 gap-2"><div class="bg-sky-100 rounded-lg p-3">grid-cols-3</div><div class="bg-sky-100 rounded-lg p-3">third</div><div class="bg-sky-100 rounded-lg p-3">third</div></div>
+          <div class="grid grid-cols-4 gap-2"><div class="bg-sky-100 rounded-lg p-3">cols-4</div><div class="bg-sky-100 rounded-lg p-3">quarter</div><div class="bg-sky-100 rounded-lg p-3">quarter</div><div class="bg-sky-100 rounded-lg p-3">quarter</div></div>
+          <div class="grid grid-cols-3 gap-2"><div class="col-span-2 bg-sky-100 rounded-lg p-3">col-span-2</div><div class="bg-sky-100 rounded-lg p-3">third</div></div>
+        </div>
+      </div>
+
+      <!-- Bento grid -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Bento grid (mixed-size tiles)</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-80">
+          <div class="col-span-2 md:row-span-2 rounded-3xl bg-gradient-to-br from-sky-500 to-indigo-600 text-white p-6 flex flex-col justify-end">
+            <div class="text-4xl mb-2">🏠</div><h3 class="text-2xl font-bold">Lorem ipsum dolor</h3><p class="text-sky-100">Consectetur adipiscing elit sed do eiusmod.</p>
+          </div>
+          <div class="rounded-3xl bg-emerald-100 p-5"><div class="text-3xl font-extrabold text-emerald-700">2,400+</div><p class="text-emerald-900 text-sm">Lorem ipsum</p></div>
+          <div class="rounded-3xl bg-amber-100 p-5"><div class="text-3xl font-extrabold text-amber-700">24h</div><p class="text-amber-900 text-sm">Dolor sit amet</p></div>
+          <div class="col-span-2 rounded-3xl bg-white ring-1 ring-slate-200 p-5 flex items-center gap-4"><div class="text-4xl">⭐</div><div><div class="font-bold">4.9 / 5</div><p class="text-slate-500 text-sm">Ut enim ad minim veniam quis nostrud</p></div></div>
+        </div>
+      </div>
+
+      <!-- Card variations -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Cards: different styles</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bg-white rounded-2xl overflow-hidden ring-1 ring-slate-200">
+            <div class="h-36 bg-gradient-to-br from-sky-100 to-emerald-100 grid place-items-center text-5xl">🏘️</div>
+            <div class="p-5"><p class="text-xs text-slate-400">Image card</p><h3 class="font-semibold">Lorem ipsum</h3><p class="text-sm text-slate-600 mt-1">Dolor sit amet, consectetur adipiscing elit sed do.</p></div>
+          </div>
+          <div class="bg-white rounded-2xl ring-1 ring-slate-200 flex flex-col">
+            <div class="px-5 py-3 border-b border-slate-100 text-sm font-medium">Card header</div>
+            <div class="p-5 flex-1"><h3 class="font-semibold">Lorem ipsum</h3><p class="text-sm text-slate-600 mt-1">Ut enim ad minim veniam, quis nostrud exercitation.</p></div>
+            <div class="px-5 py-3 border-t border-slate-100 text-xs text-slate-400">Card footer · 2 days ago</div>
+          </div>
+          <div class="rounded-2xl p-5 bg-slate-900 text-white">
+            <p class="text-xs text-slate-400">Dark card</p><h3 class="font-semibold">Lorem ipsum</h3><p class="text-sm text-slate-300 mt-1">Duis aute irure dolor in reprehenderit in voluptate.</p>
+          </div>
+          <div class="rounded-2xl p-[2px] bg-gradient-to-br from-sky-500 via-fuchsia-500 to-amber-400">
+            <div class="bg-white rounded-[14px] p-5 h-full"><p class="text-xs text-slate-400">Gradient border card</p><h3 class="font-semibold">Lorem ipsum</h3><p class="text-sm text-slate-600 mt-1">Excepteur sint occaecat cupidatat non proident.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-7">
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Horizontal card (profile)</p>
+          <div class="bg-white rounded-2xl ring-1 ring-slate-200 flex overflow-hidden">
+            <div class="w-1/3 bg-gradient-to-br from-amber-100 to-rose-100 grid place-items-center text-5xl">👷</div>
+            <div class="p-5 flex-1"><h3 class="font-semibold text-lg">Lorem Ipsum, Inspector</h3><p class="text-slate-600 text-sm mt-1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p><p class="text-xs text-slate-400 mt-3">Lorem ipsum dolor</p></div>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Stats row</p>
+          <div class="grid grid-cols-3 divide-x divide-slate-200 bg-white rounded-2xl ring-1 ring-slate-200 text-center">
+            <div class="p-5"><div class="text-2xl font-bold">2,400+</div><p class="text-xs text-slate-500">Lorem ipsum</p></div>
+            <div class="p-5"><div class="text-2xl font-bold">24h</div><p class="text-xs text-slate-500">Dolor sit</p></div>
+            <div class="p-5"><div class="text-2xl font-bold">4.9★</div><p class="text-xs text-slate-500">Amet elit</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Testimonials</p>
+        <div class="grid md:grid-cols-2 gap-5">
+          <figure class="bg-white rounded-2xl ring-1 ring-slate-200 p-6">
+            <div class="text-amber-400">★★★★★</div>
+            <blockquote class="mt-3 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3"><span class="size-10 rounded-full bg-sky-200 grid place-items-center font-bold text-sky-800">LI</span><span><b class="block text-sm">Lorem Ipsum</b><span class="text-xs text-slate-500">First-time buyer</span></span></figcaption>
+          </figure>
+          <figure class="bg-white rounded-2xl ring-1 ring-slate-200 p-6">
+            <div class="text-amber-400">★★★★★</div>
+            <blockquote class="mt-3 text-lg">"Nulla facilisi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3"><span class="size-10 rounded-full bg-emerald-200 grid place-items-center font-bold text-emerald-800">DS</span><span><b class="block text-sm">Dolor Sitamet</b><span class="text-xs text-slate-500">Real estate agent</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Sidebar + accordion + timeline -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Sidebar layout · Accordion · Timeline</p>
+        <div class="grid md:grid-cols-12 gap-6">
+          <aside class="md:col-span-3 bg-white rounded-2xl ring-1 ring-slate-200 p-2 h-fit">
+            <a href="#" class="block px-3 py-2 rounded-lg bg-sky-50 text-sky-700 font-medium">Lorem ipsum</a>
+            <a href="#" class="flex justify-between px-3 py-2 rounded-lg hover:bg-slate-50">Dolor sit amet <span class="text-xs bg-sky-600 text-white rounded-full px-2 py-0.5">4</span></a>
+            <a href="#" class="block px-3 py-2 rounded-lg hover:bg-slate-50">Consectetur</a>
+            <a href="#" class="block px-3 py-2 rounded-lg hover:bg-slate-50">Adipiscing elit</a>
+          </aside>
+          <div class="md:col-span-5 space-y-2">
+            <details class="group bg-white rounded-xl ring-1 ring-slate-200 p-4" open><summary class="font-medium cursor-pointer list-none flex justify-between">Lorem ipsum dolor sit amet? <span class="group-open:rotate-45 transition">＋</span></summary><p class="mt-2 text-sm text-slate-600">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></details>
+            <details class="group bg-white rounded-xl ring-1 ring-slate-200 p-4"><summary class="font-medium cursor-pointer list-none flex justify-between">Ut enim ad minim veniam? <span class="group-open:rotate-45 transition">＋</span></summary><p class="mt-2 text-sm text-slate-600">Quis nostrud exercitation ullamco laboris nisi ut aliquip.</p></details>
+            <details class="group bg-white rounded-xl ring-1 ring-slate-200 p-4"><summary class="font-medium cursor-pointer list-none flex justify-between">Duis aute irure dolor? <span class="group-open:rotate-45 transition">＋</span></summary><p class="mt-2 text-sm text-slate-600">In reprehenderit in voluptate velit esse cillum dolore.</p></details>
+          </div>
+          <ol class="md:col-span-4 relative border-l-2 border-sky-200 ml-3 space-y-6">
+            <li class="pl-6 relative"><span class="absolute -left-[9px] top-1 size-4 rounded-full bg-sky-600"></span><b class="text-sm">Book</b><p class="text-sm text-slate-500">Lorem ipsum dolor sit amet.</p></li>
+            <li class="pl-6 relative"><span class="absolute -left-[9px] top-1 size-4 rounded-full bg-sky-600"></span><b class="text-sm">Inspect</b><p class="text-sm text-slate-500">Consectetur adipiscing elit.</p></li>
+            <li class="pl-6 relative"><span class="absolute -left-[9px] top-1 size-4 rounded-full bg-slate-300"></span><b class="text-sm">Report</b><p class="text-sm text-slate-500">Sed do eiusmod tempor.</p></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Breadcrumb + pagination -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Breadcrumb · Pagination</p>
+        <div class="flex flex-wrap justify-between items-center gap-4 bg-white rounded-2xl ring-1 ring-slate-200 p-4 text-sm">
+          <nav class="flex items-center gap-2 text-slate-500"><a href="#" class="hover:text-sky-600">Home</a><span>/</span><a href="#" class="hover:text-sky-600">Reports</a><span>/</span><span class="text-slate-800 font-medium">Lorem Ipsum St.</span></nav>
+          <nav class="flex gap-1"><a class="px-3 py-1.5 rounded-lg text-slate-300">Prev</a><a href="#" class="px-3 py-1.5 rounded-lg bg-sky-600 text-white">1</a><a href="#" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">2</a><a href="#" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">3</a><a href="#" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">Next</a></nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Button gallery -->
+    <section>
+      <h2 class="text-3xl font-bold tracking-tight mb-8">Buttons &amp; Badges</h2>
+      <div class="flex flex-wrap gap-3 mb-4">
+        <button class="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700">Primary</button>
+        <button class="bg-slate-600 text-white px-4 py-2 rounded-lg hover:bg-slate-700">Secondary</button>
+        <button class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">Success</button>
+        <button class="bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600">Warning</button>
+        <button class="bg-rose-600 text-white px-4 py-2 rounded-lg hover:bg-rose-700">Danger</button>
+        <button class="border border-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 hover:text-white">Outline</button>
+        <button class="text-sky-600 px-4 py-2 hover:underline">Link</button>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xs font-medium">
+        <span class="bg-emerald-100 text-emerald-700 rounded-full px-2.5 py-1">Pass</span>
+        <span class="bg-amber-100 text-amber-800 rounded-full px-2.5 py-1">Monitor</span>
+        <span class="bg-rose-100 text-rose-700 rounded-full px-2.5 py-1">Repair</span>
+        <span class="bg-sky-100 text-sky-700 rounded-full px-2.5 py-1">Licensed</span>
+        <span class="bg-slate-800 text-white rounded-full px-2.5 py-1">Insured</span>
+      </div>
+    </section>
+
+    <!-- Prompts for the AI agent (part of the explorer, not the demo site) -->
+    <section class="bg-slate-100 rounded-3xl p-6 sm:p-8">
+      <h2 class="text-2xl font-bold">💡 Try this with your AI agent</h2>
+      <p class="text-slate-600 mt-1 mb-5">Copy a prompt and paste it into your AI coding agent.</p>
+      <div class="space-y-3">
+        <div class="flex flex-col sm:flex-row gap-3 sm:items-center bg-white rounded-xl p-4" data-prompt><span class="prompt-text flex-1 font-mono text-sm">Make a copy of the Tailwind page with a bold, dark design: near-black background, bright lime green accents, and huge headlines.</span><button class="copy shrink-0 border border-slate-300 rounded-full px-4 py-1.5 text-sm font-medium hover:border-sky-600">Copy</button></div>
+        <div class="flex flex-col sm:flex-row gap-3 sm:items-center bg-white rounded-xl p-4" data-prompt><span class="prompt-text flex-1 font-mono text-sm">Make a copy of the Tailwind page with softer, warmer colors and rounder shapes so it feels friendly and calming for first-time home buyers.</span><button class="copy shrink-0 border border-slate-300 rounded-full px-4 py-1.5 text-sm font-medium hover:border-sky-600">Copy</button></div>
+        <div class="flex flex-col sm:flex-row gap-3 sm:items-center bg-white rounded-xl p-4" data-prompt><span class="prompt-text flex-1 font-mono text-sm">Using Tailwind, design a page that shows a full sample inspection report with photos, ratings for each room, and a summary at the top.</span><button class="copy shrink-0 border border-slate-300 rounded-full px-4 py-1.5 text-sm font-medium hover:border-sky-600">Copy</button></div>
+        <div class="flex flex-col sm:flex-row gap-3 sm:items-center bg-white rounded-xl p-4" data-prompt><span class="prompt-text flex-1 font-mono text-sm">Make a copy of the Tailwind page with subtle animations: things fade in as you scroll and cards lift when you hover over them.</span><button class="copy shrink-0 border border-slate-300 rounded-full px-4 py-1.5 text-sm font-medium hover:border-sky-600">Copy</button></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 z-50 bg-slate-900/50 grid place-items-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6">
+      <h3 class="text-lg font-semibold">Lorem ipsum</h3>
+      <p class="mt-2 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tailwind has no built-in pop-ups, so this one was built by hand with a few lines of JavaScript.</p>
+      <div class="mt-6 flex justify-end gap-2">
+        <button class="closeModal px-4 py-2 rounded-lg border border-slate-300">Close</button>
+        <button class="closeModal px-4 py-2 rounded-lg bg-sky-600 text-white">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-slate-900 text-slate-400 text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-wrap justify-between gap-2">
+      <span>© 2026 Keystone Inspections · Lorem ipsum dolor sit amet</span>
+      <span>Built with Tailwind CSS 4</span>
+    </div>
+  </footer>
+
+  <script>
+    // Tailwind is styles only, so these small scripts power the menu, tabs, pop-up and form.
+    document.getElementById('menuBtn').onclick = function () { document.getElementById('mobileMenu').classList.toggle('hidden'); };
+
+    document.querySelectorAll('.tab').forEach(function (tab) {
+      tab.onclick = function () {
+        document.querySelectorAll('.tab').forEach(function (t) {
+          t.classList.remove('border-sky-600', 'text-sky-700'); t.classList.add('border-transparent', 'text-slate-500');
+        });
+        tab.classList.add('border-sky-600', 'text-sky-700'); tab.classList.remove('border-transparent', 'text-slate-500');
+        document.querySelectorAll('.panel').forEach(function (p) { p.classList.add('hidden'); });
+        document.getElementById(tab.dataset.tab).classList.remove('hidden');
+      };
+    });
+
+    var modal = document.getElementById('modal');
+    document.getElementById('openModal').onclick = function () { modal.classList.remove('hidden'); };
+    document.querySelectorAll('.closeModal').forEach(function (b) { b.onclick = function () { modal.classList.add('hidden'); }; });
+    modal.onclick = function (e) { if (e.target === modal) modal.classList.add('hidden'); };
+
+    document.getElementById('bookForm').onsubmit = function (e) { e.preventDefault(); document.getElementById('formMsg').classList.remove('hidden'); };
+
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.closest('[data-prompt]').querySelector('.prompt-text').innerText;
+        var done = function () { var o = btn.textContent; btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = o; }, 1500); };
+        if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done); }
+        else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); }
+      });
+    });
+  </script>
+  <!-- 🎨 Style picker: change fonts, colours and borders (explorer tool, delete this line to remove) -->
+  <script src="../shared/style-picker.js" data-framework="tailwind"></script>
+</body>
+</html>

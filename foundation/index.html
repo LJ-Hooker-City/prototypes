@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foundation Demo · Keystone Inspections</title>
+  <!-- Foundation 6 (loaded from the internet) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
+  <style>
+    .label-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: #8a8a8a; margin: 2rem 0 .6rem; }
+    .demo-cell { background: #d7ecfa; border-radius: 4px; padding: .8rem; text-align: center; font-size: .85rem; }
+    .emoji-fig { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3rem; background: linear-gradient(135deg, #d7ecfa, #e1faea); }
+    .hero { background: linear-gradient(135deg, #1779ba, #0f4f7a); color: #fff; padding: 5rem 0 4rem; }
+    .hero h1 { font-weight: 700; }
+    .hero .lead { font-size: 1.2rem; opacity: .9; }
+    section.block { padding: 3rem 0 0; }
+    .info-bar { background: #0a0a0a; color: #eee; font-size: .85rem; padding: .4rem 0; }
+    .info-bar a { color: #fff; text-decoration: underline; }
+    .prompt-row { display: flex; align-items: center; gap: 1rem; }
+    .prompt-row code { flex: 1; border: 0; background: none; font-size: .9rem; }
+    .orbit-slide-inner { height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 3.5rem; color: #fff; }
+    @media (max-width: 640px) { .prompt-row { flex-direction: column; align-items: stretch; } }
+  </style>
+</head>
+<body>
+
+  <!-- Framework info bar (part of the explorer, not the demo site) -->
+  <div class="info-bar">
+    <div class="grid-container"><div class="grid-x align-justify" style="gap:.5rem">
+      <span>You're viewing <strong>Foundation 6</strong>: a professional, layout-focused framework.</span>
+      <a href="../index.html">← Back to all frameworks</a>
+    </div></div>
+  </div>
+
+  <!-- Navigation bar (collapses to a menu button on phones) -->
+  <div class="title-bar" data-responsive-toggle="mainNav" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="mainNav"></button>
+    <div class="title-bar-title">🏠 Keystone Inspections</div>
+  </div>
+  <div class="top-bar" id="mainNav">
+    <div class="grid-container" style="width:100%"><div class="grid-x align-middle align-justify">
+      <div class="top-bar-left"><ul class="menu"><li class="menu-text">🏠 Keystone Inspections</li></ul></div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a href="#services">Services</a>
+            <ul class="menu vertical">
+              <li><a href="#">Home Inspection</a></li>
+              <li><a href="#">Pre-Listing</a></li>
+              <li><a href="#">Radon, Mold &amp; Termite</a></li>
+            </ul>
+          </li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#report">Sample Report</a></li>
+          <li><a href="#book">Contact</a></li>
+          <li><a href="#book" class="button" style="margin:0 0 0 .5rem">Book an Inspection</a></li>
+        </ul>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x align-middle">
+        <div class="cell large-7">
+          <span class="label secondary">Lorem ipsum dolor</span>
+          <h1>Lorem ipsum dolor sit amet consectetur</h1>
+          <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa.</p>
+          <a href="#book" class="button large warning">Book an Inspection</a>
+          <a href="#report" class="button large hollow" style="color:#fff;border-color:#fff">View Sample Report</a>
+        </div>
+        <div class="cell large-5">
+          <div class="card" style="color:#0a0a0a">
+            <div class="card-divider"><strong>Lorem ipsum</strong></div>
+            <div class="card-section">
+              <ul class="no-bullet" style="margin:0">
+                <li>✅ Lorem ipsum dolor sit</li><li>✅ Consectetur adipiscing elit</li><li>✅ Sed do eiusmod tempor</li><li>✅ Ut labore et dolore magna</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="grid-container">
+
+    <!-- Services -->
+    <section id="services" class="block">
+      <h2>Our Services</h2>
+      <div class="grid-x grid-margin-x small-up-1 medium-up-3" data-equalizer>
+        <div class="cell"><div class="card" data-equalizer-watch>
+          <div class="card-section"><div style="font-size:2.5rem">🏡</div><h4>Home Inspection</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante.</p><a href="#">Learn more →</a></div>
+        </div></div>
+        <div class="cell"><div class="card" data-equalizer-watch>
+          <div class="card-section"><div style="font-size:2.5rem">📋</div><h4>Pre-Listing Inspection</h4><p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum praesent mauris fusce nec tellus.</p><a href="#">Learn more →</a></div>
+        </div></div>
+        <div class="cell"><div class="card" data-equalizer-watch>
+          <div class="card-section"><div style="font-size:2.5rem">🔍</div><h4>Radon, Mold &amp; Termite</h4><p>Mauris massa vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent.</p><a href="#">Learn more →</a></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Pricing table -->
+    <section id="pricing" class="block">
+      <h2>Pricing</h2>
+      <div class="table-scroll">
+        <table class="hover unstriped" style="border:1px solid #e6e6e6">
+          <thead><tr><th>Package</th><th>Description</th><th>Home size</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Essential</strong></td><td>Lorem ipsum dolor sit amet consectetur</td><td>Up to 1,500 sq ft</td><td>$350</td></tr>
+            <tr><td><strong>Standard</strong> <span class="label success">Popular</span></td><td>Sed ut perspiciatis unde omnis iste</td><td>1,500–3,000 sq ft</td><td>$475</td></tr>
+            <tr><td><strong>Premium</strong></td><td>Nemo enim ipsam voluptatem quia voluptas</td><td>3,000+ sq ft</td><td>$625</td></tr>
+            <tr><td><strong>Add-on: Radon</strong> <span class="label warning">New</span></td><td>Neque porro quisquam est qui dolorem</td><td>Any</td><td>$150</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sample report -->
+    <section id="report" class="block">
+      <h2>Sample Report</h2>
+      <ul class="tabs" data-tabs id="report-tabs">
+        <li class="tabs-title is-active"><a href="#t-summary" aria-selected="true">Summary</a></li>
+        <li class="tabs-title"><a href="#t-roof">Roof</a></li>
+        <li class="tabs-title"><a href="#t-electrical">Electrical</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="report-tabs">
+        <div class="tabs-panel is-active" id="t-summary">
+          <p>Report progress</p>
+          <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="progress-meter" style="width:75%"><p class="progress-meter-text">75%</p></div></div>
+          <div class="callout success">✅ <strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="callout warning">⚠️ <strong>Monitor:</strong> sed do eiusmod tempor incididunt ut labore.</div>
+          <div class="callout alert" style="margin-bottom:0">🛠️ <strong>Repair:</strong> ut enim ad minim veniam, quis nostrud exercitation.</div>
+        </div>
+        <div class="tabs-panel" id="t-roof"><p><span class="label warning">Monitor</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        <div class="tabs-panel" id="t-electrical"><p><span class="label success">Pass</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
+      </div>
+      <p style="margin-top:1rem"><button class="button hollow" data-open="demoModal">Open a pop-up (Reveal)</button>
+      <span data-tooltip tabindex="1" title="Lorem ipsum: this is a tooltip!" style="border-bottom:1px dotted;cursor:help">Hover over me for a tooltip</span></p>
+    </section>
+
+    <!-- Booking form -->
+    <section id="book" class="block">
+      <h2>Book an Inspection</h2>
+      <form id="bookForm" class="callout">
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-6"><label>Full name<input type="text" placeholder="Lorem Ipsum"></label></div>
+          <div class="cell medium-6"><label>Email<input type="email" placeholder="lorem@ipsum.com"></label></div>
+          <div class="cell"><label>Property address<input type="text" placeholder="123 Lorem Street"></label></div>
+          <div class="cell medium-6"><label>Property type<select><option>Single-family home</option><option>Condo / Townhouse</option><option>Multi-family</option><option>Commercial</option></select></label></div>
+          <div class="cell medium-6"><label>Preferred date<input type="date"></label></div>
+          <div class="cell">
+            <fieldset><legend>Add-ons</legend>
+              <input id="a1" type="checkbox"><label for="a1">Radon</label>
+              <input id="a2" type="checkbox"><label for="a2">Mold</label>
+              <input id="a3" type="checkbox"><label for="a3">Termite</label>
+            </fieldset>
+          </div>
+          <div class="cell medium-6">
+            <p style="margin-bottom:.3rem">Email me the report</p>
+            <div class="switch"><input class="switch-input" id="sw1" type="checkbox" checked><label class="switch-paddle" for="sw1"><span class="show-for-sr">Email me the report</span></label></div>
+          </div>
+          <div class="cell"><label>Notes<textarea rows="3" placeholder="Lorem ipsum dolor sit amet..."></textarea></label></div>
+          <div class="cell"><button class="button large" type="submit">Request Inspection</button></div>
+        </div>
+        <div id="formMsg" class="callout primary hide" style="margin-bottom:0">This is a demo form. Nothing was sent.</div>
+      </form>
+    </section>
+
+    <!-- ===== Layout & Containers showcase ===== -->
+    <section id="layout" class="block">
+      <h2>Layout &amp; Containers</h2>
+      <p style="color:#8a8a8a">The grey labels show Foundation's name for each piece. Use those names when you ask your AI for changes.</p>
+
+      <p class="label-tag">XY Grid: grid-x &amp; cell</p>
+      <div class="grid-x grid-margin-x" style="margin-bottom:.5rem"><div class="cell small-6"><div class="demo-cell">cell small-6</div></div><div class="cell small-6"><div class="demo-cell">cell small-6</div></div></div>
+      <div class="grid-x grid-margin-x" style="margin-bottom:.5rem"><div class="cell small-4"><div class="demo-cell">cell small-4</div></div><div class="cell small-4"><div class="demo-cell">cell small-4</div></div><div class="cell small-4"><div class="demo-cell">cell small-4</div></div></div>
+      <div class="grid-x grid-margin-x" style="margin-bottom:.5rem"><div class="cell small-3"><div class="demo-cell">small-3</div></div><div class="cell small-3"><div class="demo-cell">small-3</div></div><div class="cell small-3"><div class="demo-cell">small-3</div></div><div class="cell small-3"><div class="demo-cell">small-3</div></div></div>
+      <div class="grid-x grid-margin-x"><div class="cell small-8"><div class="demo-cell">cell small-8</div></div><div class="cell auto"><div class="demo-cell">cell auto</div></div></div>
+
+      <p class="label-tag">Card: different styles</p>
+      <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-4">
+        <div class="cell"><div class="card">
+          <div class="emoji-fig">🏘️</div>
+          <div class="card-section"><small style="color:#8a8a8a">Card with image</small><h5>Lorem ipsum</h5><p>Dolor sit amet, consectetur adipiscing elit sed do.</p></div>
+        </div></div>
+        <div class="cell"><div class="card">
+          <div class="card-divider">card-divider (header)</div>
+          <div class="card-section"><h5>Lorem ipsum</h5><p>Ut enim ad minim veniam, quis nostrud exercitation.</p></div>
+          <div class="card-divider"><small>card-divider (footer)</small></div>
+        </div></div>
+        <div class="cell"><div class="card" style="background:#1779ba;color:#fff">
+          <div class="card-section"><small style="opacity:.7">Colored card</small><h5>Lorem ipsum</h5><p>Duis aute irure dolor in reprehenderit in voluptate.</p></div>
+        </div></div>
+        <div class="cell"><div class="callout success" style="height:calc(100% - 1rem)">
+          <small style="color:#8a8a8a">Callout (simple box)</small><h5>Lorem ipsum</h5><p>Excepteur sint occaecat cupidatat non proident.</p>
+        </div></div>
+      </div>
+
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-7">
+          <p class="label-tag" style="margin-top:0">Media object (profiles &amp; reviews)</p>
+          <div class="card"><div class="card-section">
+            <div class="media-object stack-for-small">
+              <div class="media-object-section"><div style="width:80px;height:80px;border-radius:50%;background:#fff3d9;display:grid;place-items:center;font-size:2.5rem">👷</div></div>
+              <div class="media-object-section main-section"><h5>Lorem Ipsum, Inspector</h5><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p></div>
+            </div>
+            <div class="media-object" style="margin-bottom:0">
+              <div class="media-object-section"><div style="width:48px;height:48px;border-radius:50%;background:#e1faea;display:grid;place-items:center;font-size:1.5rem">🙂</div></div>
+              <div class="media-object-section main-section"><strong>Dolor Sitamet</strong> <small>★★★★★</small><p style="margin:0">"Nulla facilisi. Sed ut perspiciatis unde omnis iste natus."</p></div>
+            </div>
+          </div></div>
+        </div>
+        <div class="cell large-5">
+          <p class="label-tag" style="margin-top:0">Stats row · Blockquote</p>
+          <div class="callout"><div class="grid-x text-center">
+            <div class="cell small-4"><h4 style="margin:0">2,400+</h4><small>Lorem</small></div>
+            <div class="cell small-4"><h4 style="margin:0">24h</h4><small>Ipsum</small></div>
+            <div class="cell small-4"><h4 style="margin:0">4.9★</h4><small>Dolor</small></div>
+          </div></div>
+          <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."<cite>Lorem Ipsum, first-time buyer</cite></blockquote>
+        </div>
+      </div>
+
+      <p class="label-tag">Sidebar layout · Accordion menu · Accordion</p>
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-3">
+          <ul class="vertical menu accordion-menu" data-accordion-menu style="border:1px solid #e6e6e6">
+            <li><a href="#">Lorem ipsum</a>
+              <ul class="menu vertical nested"><li><a href="#">Dolor sit</a></li><li><a href="#">Amet elit</a></li></ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">Adipiscing elit</a></li>
+          </ul>
+        </div>
+        <div class="cell medium-9">
+          <ul class="accordion" data-accordion>
+            <li class="accordion-item is-active" data-accordion-item><a href="#" class="accordion-title">Lorem ipsum dolor sit amet?</a><div class="accordion-content" data-tab-content><p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></li>
+            <li class="accordion-item" data-accordion-item><a href="#" class="accordion-title">Ut enim ad minim veniam?</a><div class="accordion-content" data-tab-content><p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></li>
+            <li class="accordion-item" data-accordion-item><a href="#" class="accordion-title">Duis aute irure dolor?</a><div class="accordion-content" data-tab-content><p>In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="label-tag">Orbit (slideshow)</p>
+      <div class="orbit" role="region" aria-label="Lorem ipsum slideshow" data-orbit>
+        <div class="orbit-wrapper">
+          <div class="orbit-controls">
+            <button class="orbit-previous"><span class="show-for-sr">Previous</span>&#9664;&#xFE0E;</button>
+            <button class="orbit-next"><span class="show-for-sr">Next</span>&#9654;&#xFE0E;</button>
+          </div>
+          <ul class="orbit-container">
+            <li class="is-active orbit-slide"><div class="orbit-slide-inner" style="background:#1779ba">🏡<small style="font-size:1.1rem">Lorem ipsum dolor</small></div></li>
+            <li class="orbit-slide"><div class="orbit-slide-inner" style="background:#3adb76">🏢<small style="font-size:1.1rem">Consectetur adipiscing</small></div></li>
+            <li class="orbit-slide"><div class="orbit-slide-inner" style="background:#cc4b37">🏘️<small style="font-size:1.1rem">Sed do eiusmod</small></div></li>
+          </ul>
+        </div>
+        <nav class="orbit-bullets">
+          <button class="is-active" data-slide="0"><span class="show-for-sr">Slide 1</span></button>
+          <button data-slide="1"><span class="show-for-sr">Slide 2</span></button>
+          <button data-slide="2"><span class="show-for-sr">Slide 3</span></button>
+        </nav>
+      </div>
+
+      <p class="label-tag">Breadcrumbs · Pagination</p>
+      <div class="callout grid-x align-justify align-middle" style="gap:1rem">
+        <nav aria-label="You are here:"><ul class="breadcrumbs" style="margin:0"><li><a href="#">Home</a></li><li><a href="#">Reports</a></li><li><span class="show-for-sr">Current: </span>Lorem Ipsum St.</li></ul></nav>
+        <nav aria-label="Pagination"><ul class="pagination" style="margin:0"><li class="pagination-previous disabled">Previous</li><li class="current">1</li><li><a href="#">2</a></li><li><a href="#">3</a></li><li class="ellipsis"></li><li class="pagination-next"><a href="#">Next</a></li></ul></nav>
+      </div>
+    </section>
+
+    <!-- Button gallery -->
+    <section class="block">
+      <h2>Buttons, Labels &amp; Badges</h2>
+      <p>
+        <a class="button">Primary</a>
+        <a class="button secondary">Secondary</a>
+        <a class="button success">Success</a>
+        <a class="button warning">Warning</a>
+        <a class="button alert">Alert</a>
+        <a class="button hollow">Hollow</a>
+        <a class="button clear">Clear</a>
+      </p>
+      <div class="button-group"><a class="button">Button</a><a class="button">group</a><a class="button">example</a></div>
+      <p>
+        <span class="label success">Pass</span>
+        <span class="label warning">Monitor</span>
+        <span class="label alert">Repair</span>
+        <span class="label primary">Licensed</span>
+        <span class="badge secondary">4</span> <span class="badge">9</span>
+      </p>
+    </section>
+
+    <!-- Prompts for the AI agent (part of the explorer, not the demo site) -->
+    <section class="block" style="padding-bottom:3rem">
+      <div class="callout secondary">
+        <h4>💡 Try this with your AI agent</h4>
+        <p style="color:#8a8a8a">Copy a prompt and paste it into your AI coding agent.</p>
+        <div class="callout prompt-row" style="background:#fff" data-prompt><code class="prompt-text">Make a copy of the Foundation page with a forest green and cream color scheme so it feels more local and trustworthy.</code><button class="button small copy" style="margin:0">Copy</button></div>
+        <div class="callout prompt-row" style="background:#fff" data-prompt><code class="prompt-text">Make a copy of the Foundation page laid out like a news website, with a big featured article and a sidebar of smaller links.</code><button class="button small copy" style="margin:0">Copy</button></div>
+        <div class="callout prompt-row" style="background:#fff" data-prompt><code class="prompt-text">Using Foundation, make a "Service areas" page with a grid of cities, each in a card with a short lorem ipsum description.</code><button class="button small copy" style="margin:0">Copy</button></div>
+        <div class="callout prompt-row" style="background:#fff;margin-bottom:0" data-prompt><code class="prompt-text">Make a copy of the Foundation page with a slide-out menu from the side (Foundation calls it off-canvas) instead of the top menu bar.</code><button class="button small copy" style="margin:0">Copy</button></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reveal (modal) -->
+  <div class="reveal" id="demoModal" data-reveal>
+    <h4>Lorem ipsum</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Foundation calls this pop-up window a "Reveal". It's built into the framework.</p>
+    <button class="button" data-close>Got it</button>
+    <button class="close-button" data-close aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
+  </div>
+
+  <footer style="background:#0a0a0a;color:#aaa;font-size:.85rem;padding:1.5rem 0">
+    <div class="grid-container"><div class="grid-x align-justify" style="gap:.5rem">
+      <span>© 2026 Keystone Inspections · Lorem ipsum dolor sit amet</span><span>Built with Foundation 6</span>
+    </div></div>
+  </footer>
+
+  <!-- Foundation's interactive pieces need jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+    document.getElementById('bookForm').onsubmit = function (e) { e.preventDefault(); document.getElementById('formMsg').classList.remove('hide'); };
+
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.closest('[data-prompt]').querySelector('.prompt-text').innerText;
+        var done = function () { var o = btn.textContent; btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = o; }, 1500); };
+        if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done); }
+        else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); }
+      });
+    });
+  </script>
+  <!-- 🎨 Style picker: change fonts, colours and borders (explorer tool, delete this line to remove) -->
+  <script src="../shared/style-picker.js" data-framework="foundation"></script>
+</body>
+</html>

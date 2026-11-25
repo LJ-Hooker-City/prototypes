@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Framework Explorer</title>
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --text: #1f1d1a;
+      --muted: #6b665e;
+      --border: #e4e0d8;
+      --accent: #c2410c;
+      --accent-soft: #fdeee4;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161513;
+        --surface: #201e1b;
+        --text: #f1eee8;
+        --muted: #a39d93;
+        --border: #34312c;
+        --accent: #fb923c;
+        --accent-soft: #3a2518;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 64px 0 32px; }
+    .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: .3em 0; }
+    h2 { font-size: 1.6rem; margin: 56px 0 8px; }
+    .lead { font-size: 1.15rem; color: var(--muted); max-width: 680px; }
+    .muted { color: var(--muted); }
+
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+    .step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .step b { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; margin-bottom: 8px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; display: flex; flex-direction: column; text-decoration: none; color: inherit;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      border-top: 5px solid var(--brand);
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.08); border-color: var(--brand); }
+    .card h3 { margin: 0 0 4px; font-size: 1.35rem; display: flex; align-items: center; gap: 10px; }
+    .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--brand); flex: none; }
+    .tagline { color: var(--muted); margin: 0 0 14px; }
+    .card dl { margin: 0 0 18px; display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: .95rem; }
+    .card dt { color: var(--muted); }
+    .card dd { margin: 0; }
+    .card .go { margin-top: auto; font-weight: 600; color: var(--brand); }
+
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-top: 16px; font-size: .95rem; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: var(--accent-soft); }
+    tr:last-child td { border-bottom: 0; }
+    .table-scroll { overflow-x: auto; }
+
+    .prompts { display: grid; gap: 12px; margin-top: 16px; }
+    .prompt { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; display: flex; gap: 16px; align-items: center; justify-content: space-between; }
+    .prompt-text { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; }
+    button.copy { flex: none; border: 1px solid var(--border); background: var(--accent-soft); color: var(--text); padding: 8px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: .85rem; font-weight: 600; }
+    button.copy:hover { border-color: var(--accent); }
+
+    .callout { background: var(--accent-soft); border-radius: var(--radius); padding: 18px 20px; margin-top: 16px; }
+    #experiments ul { padding-left: 20px; }
+    footer { margin: 72px 0 40px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 560px) { .prompt { flex-direction: column; align-items: stretch; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Framework Explorer</div>
+      <h1>See how five web design toolkits look and feel</h1>
+    </header>
+
+    <section>
+      <h2>How to use this</h2>
+      <div class="steps">
+        <div class="step"><b>1</b><br><strong>Browse.</strong> Open each framework page below. Notice the buttons, fonts, spacing and colors.</div>
+        <div class="step"><b>2</b><br><strong>Play with the look.</strong> Click the round 🎨 button at the bottom-left of any framework page to change its fonts, colors and borders. Try the quick looks, or “Surprise me”.</div>
+        <div class="step"><b>3</b><br><strong>Ask your AI.</strong> Copy one of the prompts at the bottom of each page into your AI coding agent and see what it makes.</div>
+        <div class="step"><b>4</b><br><strong>Compare and repeat.</strong> Your AI saves each new design as a separate page, so nothing gets lost and you can always go back.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The five frameworks</h2>
+      <p class="muted">Click a card to open that framework's demo page in a new tab.</p>
+      <div class="grid">
+        <a class="card" href="bootstrap/index.html" target="_blank" rel="noopener" style="--brand:#7952b3">
+          <h3><span class="dot"></span>Bootstrap</h3>
+          <p class="tagline">The most popular choice. Clean, familiar, works everywhere.</p>
+          <dl>
+            <dt>Feels like</dt><dd>A polished business website</dd>
+            <dt>Good for</dt><dd>Getting something solid built fast</dd>
+            <dt>Watch out</dt><dd>Sites can look "default" unless you customize them</dd>
+          </dl>
+          <span class="go">Open Bootstrap →</span>
+        </a>
+        <a class="card" href="tailwind/index.html" target="_blank" rel="noopener" style="--brand:#0ea5e9">
+          <h3><span class="dot"></span>Tailwind CSS</h3>
+          <p class="tagline">No ready-made look. You (or your AI) design every detail.</p>
+          <dl>
+            <dt>Feels like</dt><dd>A modern startup or app website</dd>
+            <dt>Good for</dt><dd>Unique, custom designs. AI agents are very good at it</dd>
+            <dt>Watch out</dt><dd>The page code looks busy, with lots of small style words</dd>
+          </dl>
+          <span class="go">Open Tailwind →</span>
+        </a>
+        <a class="card" href="bulma/index.html" target="_blank" rel="noopener" style="--brand:#00d1b2">
+          <h3><span class="dot"></span>Bulma</h3>
+          <p class="tagline">Friendly and simple, with readable class names.</p>
+          <dl>
+            <dt>Feels like</dt><dd>A bright, approachable small-business site</dd>
+            <dt>Good for</dt><dd>Simple sites where readable code matters</dd>
+            <dt>Watch out</dt><dd>Styles only: no built-in pop-ups or menus that move</dd>
+          </dl>
+          <span class="go">Open Bulma →</span>
+        </a>
+        <a class="card" href="materialize/index.html" target="_blank" rel="noopener" style="--brand:#ee6e73">
+          <h3><span class="dot"></span>Materialize</h3>
+          <p class="tagline">Based on Google's "Material Design" look.</p>
+          <dl>
+            <dt>Feels like</dt><dd>An Android app or an older Google product</dd>
+            <dt>Good for</dt><dd>A bold, colorful, app-like style with shadows and ripples</dd>
+            <dt>Watch out</dt><dd>The original project is no longer actively updated</dd>
+          </dl>
+          <span class="go">Open Materialize →</span>
+        </a>
+        <a class="card" href="foundation/index.html" target="_blank" rel="noopener" style="--brand:#1779ba">
+          <h3><span class="dot"></span>Foundation</h3>
+          <p class="tagline">A professional toolkit built for flexible layouts.</p>
+          <dl>
+            <dt>Feels like</dt><dd>A corporate, news or institutional website</dd>
+            <dt>Good for</dt><dd>Structured, content-heavy pages</dd>
+            <dt>Watch out</dt><dd>Smaller community and slower updates these days</dd>
+          </dl>
+          <span class="go">Open Foundation →</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Prompts to try with your AI agent</h2>
+      <p class="muted">Click <em>Copy</em>, then paste into your AI coding agent (Claude Code, Cursor, and so on). Each framework page has more ideas of its own.</p>
+      <div class="prompts">
+        <div class="prompt"><p class="prompt-text">Make a dark-mode version of the Bootstrap inspection page and add it to "My experiments" on the home page.</p><button class="copy">Copy</button></div>
+        <div class="prompt"><p class="prompt-text">Rebuild the inspection page in Tailwind for a high-end inspection company that serves luxury homes. Use lots of white space and an elegant font.</p><button class="copy">Copy</button></div>
+        <div class="prompt"><p class="prompt-text">Take the Bulma inspection page and turn it into a commercial building inspection company. Keep the same layout.</p><button class="copy">Copy</button></div>
+        <div class="prompt"><p class="prompt-text">Which of these five frameworks would you recommend for my property inspection business website, and why? Explain it without technical terms.</p><button class="copy">Copy</button></div>
+        <div class="prompt"><p class="prompt-text">Make three very different-looking versions of the Bootstrap inspection page (trustworthy and classic, modern and minimal, bold and friendly) so I can compare them.</p><button class="copy">Copy</button></div>
+      </div>
+    </section>
+
+    <section id="experiments">
+      <h2>My experiments</h2>
+      <p class="muted">Designs your AI agent makes for you show up here.</p>
+      <!-- AI agents: add a link to each new design as an <li> inside this list. Example:
+           <li><a href="bootstrap/dark-mode.html" target="_blank" rel="noopener">Bootstrap: dark mode</a> <span class="muted">(night-time look with gold accents)</span></li> -->
+      <ul id="experiment-list">
+      </ul>
+      <p class="callout" id="experiments-empty">Nothing here yet. Try one of the prompts above and your first design will show up in this list.</p>
+    </section>
+
+    <footer>
+      Every page loads its framework from the internet, so you need to be online. No installs needed: just open the files in your browser.
+    </footer>
+  </div>
+
+  <script>
+    // Copy buttons
+    document.querySelectorAll('button.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.parentElement.querySelector('.prompt-text').innerText;
+        var done = function () { var o = btn.textContent; btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = o; }, 1500); };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done);
+        } else {
+          var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); ta.remove(); done();
+        }
+      });
+    });
+    // Hide the empty message once there are experiments
+    if (document.querySelectorAll('#experiment-list li').length) {
+      document.getElementById('experiments-empty').hidden = true;
+    }
+  </script>
+</body>
+</html>

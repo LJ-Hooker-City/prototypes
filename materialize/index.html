@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Materialize Demo · Keystone Inspections</title>
+  <!-- Materialize 1.0 + Google's Material Icons (loaded from the internet) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    body { display: flex; min-height: 100vh; flex-direction: column; background: #fafafa; }
+    main { flex: 1 0 auto; }
+    .label-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: #9e9e9e; margin: 2rem 0 .6rem; }
+    .demo-cell { background: #b2dfdb; border-radius: 4px; padding: .8rem; text-align: center; font-size: .85rem; }
+    .emoji-fig { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; background: linear-gradient(135deg, #b2dfdb, #bbdefb); }
+    .hero { padding: 80px 0 60px; }
+    .prompt-row { display: flex; align-items: center; gap: 1rem; padding: 1rem !important; }
+    .prompt-row code { flex: 1; font-size: .9rem; }
+    .carousel .carousel-item { width: 220px; height: 200px; }
+    .carousel .carousel-item > div { height: 100%; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 3rem; color: #fff; }
+    nav .brand-logo { font-size: 1.4rem; font-weight: 500; }
+    .tabs .tab a, .tabs .tab a:hover, .tabs .tab a.active { color: #00897b; }
+    .tabs .tab a:focus.active { background-color: rgba(0,137,123,.1); }
+    .tabs .indicator { background-color: #00897b; }
+    @media (max-width: 600px) { .prompt-row { flex-direction: column; align-items: stretch; } }
+  </style>
+</head>
+<body>
+
+  <!-- Framework info bar (part of the explorer, not the demo site) -->
+  <div class="grey darken-4 white-text" style="font-size:.85rem;padding:.4rem 0">
+    <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem">
+      <span>You're viewing <strong>Materialize 1.0</strong>: Google's Material Design look.</span>
+      <a href="../index.html" class="white-text" style="text-decoration:underline">← Back to all frameworks</a>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <nav class="teal">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">🏠 Keystone</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#report">Sample Report</a></li>
+        <li><a href="#book">Contact</a></li>
+        <li><a href="#book" class="btn amber darken-2 waves-effect waves-light">Book an Inspection</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#report">Sample Report</a></li>
+    <li><a href="#book">Contact</a></li>
+  </ul>
+
+  <!-- Hero -->
+  <header class="hero teal lighten-5">
+    <div class="container">
+      <div class="row valign-wrapper" style="flex-wrap:wrap">
+        <div class="col s12 l7">
+          <div class="chip teal white-text">Lorem ipsum dolor</div>
+          <h2 style="font-weight:500;margin-top:.6em">Lorem ipsum dolor sit amet consectetur</h2>
+          <p class="flow-text grey-text text-darken-1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <a href="#book" class="btn-large teal waves-effect waves-light"><i class="material-icons left">event</i>Book an Inspection</a>
+          <a href="#report" class="btn-large btn-flat teal-text waves-effect">View Sample Report</a>
+        </div>
+        <div class="col s12 l5">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Lorem ipsum</span>
+              <ul class="collection" style="border:0;margin:0">
+                <li class="collection-item"><i class="material-icons tiny teal-text">check_circle</i> Lorem ipsum dolor sit</li>
+                <li class="collection-item"><i class="material-icons tiny teal-text">check_circle</i> Consectetur adipiscing elit</li>
+                <li class="collection-item"><i class="material-icons tiny teal-text">check_circle</i> Sed do eiusmod tempor</li>
+                <li class="collection-item"><i class="material-icons tiny teal-text">check_circle</i> Ut labore et dolore magna</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <h4>Our Services</h4>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-content">
+              <i class="material-icons medium teal-text">home</i>
+              <span class="card-title">Home Inspection</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero sed cursus ante.</p>
+            </div>
+            <div class="card-action"><a href="#" class="teal-text">Learn more</a></div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-content">
+              <i class="material-icons medium teal-text">assignment</i>
+              <span class="card-title">Pre-Listing Inspection</span>
+              <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum praesent mauris fusce nec tellus.</p>
+            </div>
+            <div class="card-action"><a href="#" class="teal-text">Learn more</a></div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-content">
+              <i class="material-icons medium teal-text">search</i>
+              <span class="card-title">Radon, Mold &amp; Termite</span>
+              <p>Mauris massa vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent.</p>
+            </div>
+            <div class="card-action"><a href="#" class="teal-text">Learn more</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing table -->
+    <section id="pricing" class="section">
+      <h4>Pricing</h4>
+      <div class="card"><div class="card-content" style="overflow-x:auto">
+        <table class="striped highlight responsive-table">
+          <thead><tr><th>Package</th><th>Description</th><th>Home size</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Essential</strong></td><td>Lorem ipsum dolor sit amet consectetur</td><td>Up to 1,500 sq ft</td><td>$350</td></tr>
+            <tr><td><strong>Standard</strong> <span class="new badge green" data-badge-caption="Popular"></span></td><td>Sed ut perspiciatis unde omnis iste</td><td>1,500–3,000 sq ft</td><td>$475</td></tr>
+            <tr><td><strong>Premium</strong></td><td>Nemo enim ipsam voluptatem quia voluptas</td><td>3,000+ sq ft</td><td>$625</td></tr>
+            <tr><td><strong>Add-on: Radon</strong> <span class="new badge amber darken-2" data-badge-caption="New"></span></td><td>Neque porro quisquam est qui dolorem</td><td>Any</td><td>$150</td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </section>
+
+    <!-- Sample report -->
+    <section id="report" class="section">
+      <h4>Sample Report</h4>
+      <div class="card">
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a class="active" href="#t-summary">Summary</a></li>
+            <li class="tab"><a href="#t-roof">Roof</a></li>
+            <li class="tab"><a href="#t-electrical">Electrical</a></li>
+          </ul>
+        </div>
+        <div class="card-content">
+          <div id="t-summary">
+            <p>Report progress</p>
+            <div class="progress teal lighten-4"><div class="determinate teal" style="width:75%"></div></div>
+            <div class="card-panel green lighten-5 green-text text-darken-3" style="margin:.5rem 0">✅ <strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="card-panel amber lighten-5 amber-text text-darken-4" style="margin:.5rem 0">⚠️ <strong>Monitor:</strong> sed do eiusmod tempor incididunt ut labore.</div>
+            <div class="card-panel red lighten-5 red-text text-darken-3" style="margin:.5rem 0">🛠️ <strong>Repair:</strong> ut enim ad minim veniam, quis nostrud exercitation.</div>
+          </div>
+          <div id="t-roof"><p><span class="new badge amber darken-2 left" style="margin-right:.5rem" data-badge-caption="Monitor"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></div>
+          <div id="t-electrical"><p><span class="new badge green left" style="margin-right:.5rem" data-badge-caption="Pass"></span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></div>
+        </div>
+      </div>
+      <a class="btn-flat waves-effect modal-trigger" href="#modal1">Open a pop-up (modal)</a>
+      <a class="btn-flat waves-effect" onclick="M.toast({html: 'Lorem ipsum: this is a toast message'})">Show a toast</a>
+    </section>
+
+    <!-- Booking form -->
+    <section id="book" class="section">
+      <h4>Book an Inspection</h4>
+      <div class="card"><div class="card-content">
+        <form id="bookForm">
+          <div class="row">
+            <div class="input-field col s12 m6"><i class="material-icons prefix">person</i><input id="name" type="text"><label for="name">Full name</label></div>
+            <div class="input-field col s12 m6"><i class="material-icons prefix">email</i><input id="email" type="email"><label for="email">Email</label></div>
+            <div class="input-field col s12"><i class="material-icons prefix">place</i><input id="address" type="text"><label for="address">Property address</label></div>
+            <div class="input-field col s12 m6"><select><option>Single-family home</option><option>Condo / Townhouse</option><option>Multi-family</option><option>Commercial</option></select><label>Property type</label></div>
+            <div class="input-field col s12 m6"><input id="date" type="text" class="datepicker"><label for="date">Preferred date</label></div>
+            <div class="col s12" style="margin-bottom:1rem">
+              <p class="grey-text">Add-ons</p>
+              <label style="margin-right:1.5rem"><input type="checkbox" class="filled-in"><span>Radon</span></label>
+              <label style="margin-right:1.5rem"><input type="checkbox" class="filled-in"><span>Mold</span></label>
+              <label><input type="checkbox" class="filled-in"><span>Termite</span></label>
+            </div>
+            <div class="input-field col s12"><textarea id="notes" class="materialize-textarea"></textarea><label for="notes">Notes</label></div>
+            <div class="col s12"><button class="btn-large teal waves-effect waves-light" type="submit">Request Inspection<i class="material-icons right">send</i></button></div>
+          </div>
+        </form>
+      </div></div>
+    </section>
+
+    <!-- ===== Layout & Containers showcase ===== -->
+    <section id="layout" class="section">
+      <h4>Layout &amp; Containers</h4>
+      <p class="grey-text">The grey labels show Materialize's name for each piece. Use those names when you ask your AI for changes.</p>
+
+      <p class="label-tag">Grid: row &amp; col (s = phone, m = tablet, l = desktop)</p>
+      <div class="row" style="margin-bottom:.4rem"><div class="col s6"><div class="demo-cell">col s6</div></div><div class="col s6"><div class="demo-cell">col s6</div></div></div>
+      <div class="row" style="margin-bottom:.4rem"><div class="col s4"><div class="demo-cell">col s4</div></div><div class="col s4"><div class="demo-cell">col s4</div></div><div class="col s4"><div class="demo-cell">col s4</div></div></div>
+      <div class="row" style="margin-bottom:.4rem"><div class="col s3"><div class="demo-cell">col s3</div></div><div class="col s3"><div class="demo-cell">col s3</div></div><div class="col s3"><div class="demo-cell">col s3</div></div><div class="col s3"><div class="demo-cell">col s3</div></div></div>
+      <div class="row"><div class="col s8"><div class="demo-cell">col s8</div></div><div class="col s4"><div class="demo-cell">col s4</div></div></div>
+
+      <p class="label-tag">Card: different styles</p>
+      <div class="row">
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image"><div class="emoji-fig">🏘️</div>
+              <a class="btn-floating halfway-fab waves-effect waves-light amber darken-2"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content"><p class="grey-text" style="font-size:.8rem">Image card + floating button</p><span class="card-title">Lorem ipsum</span><p>Dolor sit amet, consectetur adipiscing elit.</p></div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light"><div class="emoji-fig activator" style="cursor:pointer">🔎</div></div>
+            <div class="card-content"><span class="card-title activator grey-text text-darken-4">Reveal card<i class="material-icons right">more_vert</i></span><p class="grey-text">Click the image or ⋮ to reveal more.</p></div>
+            <div class="card-reveal"><span class="card-title grey-text text-darken-4">Lorem ipsum<i class="material-icons right">close</i></span><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p></div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card blue-grey darken-2 white-text">
+            <div class="card-content"><p style="font-size:.8rem;opacity:.7">Colored card</p><span class="card-title">Lorem ipsum</span><p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p></div>
+            <div class="card-action"><a href="#" class="amber-text">Action</a><a href="#" class="amber-text">Another</a></div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card-panel teal white-text">
+            <p style="font-size:.8rem;opacity:.7">card-panel (simple box)</p>
+            <h5 style="margin-top:0">Lorem ipsum</h5>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 l7">
+          <p class="label-tag" style="margin-top:0">Horizontal card</p>
+          <div class="card horizontal">
+            <div class="card-image"><div class="emoji-fig" style="width:140px;height:100%;background:linear-gradient(135deg,#ffecb3,#ffcdd2)">👷</div></div>
+            <div class="card-stacked">
+              <div class="card-content"><span class="card-title">Lorem Ipsum, Inspector</span><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p></div>
+              <div class="card-action"><a href="#" class="teal-text">View profile</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l5">
+          <p class="label-tag" style="margin-top:0">Collection (list) with avatars</p>
+          <ul class="collection">
+            <li class="collection-item avatar"><i class="material-icons circle teal">home</i><span class="title">Lorem ipsum</span><p class="grey-text">Dolor sit amet</p><a href="#!" class="secondary-content"><i class="material-icons teal-text">star</i></a></li>
+            <li class="collection-item avatar"><i class="material-icons circle amber darken-2">roofing</i><span class="title">Consectetur</span><p class="grey-text">Adipiscing elit</p></li>
+            <li class="collection-item avatar"><i class="material-icons circle red lighten-1">electrical_services</i><span class="title">Sed do eiusmod</span><p class="grey-text">Tempor incididunt</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m6">
+          <p class="label-tag" style="margin-top:0">Collapsible (accordion)</p>
+          <ul class="collapsible popout">
+            <li class="active"><div class="collapsible-header"><i class="material-icons">help_outline</i>Lorem ipsum dolor sit amet?</div><div class="collapsible-body"><span>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</span></div></li>
+            <li><div class="collapsible-header"><i class="material-icons">help_outline</i>Ut enim ad minim veniam?</div><div class="collapsible-body"><span>Quis nostrud exercitation ullamco laboris nisi ut aliquip.</span></div></li>
+            <li><div class="collapsible-header"><i class="material-icons">help_outline</i>Duis aute irure dolor?</div><div class="collapsible-body"><span>In reprehenderit in voluptate velit esse cillum dolore.</span></div></li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <p class="label-tag" style="margin-top:0">Blockquote · Chips</p>
+          <blockquote style="border-left-color:#26a69a">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante." <br><span class="grey-text">Lorem Ipsum, first-time buyer</span></blockquote>
+          <div style="margin-top:1rem">
+            <div class="chip">🏠 Lorem</div><div class="chip">🔌 Ipsum</div><div class="chip">🚿 Dolor<i class="close material-icons">close</i></div><div class="chip">🌿 Amet<i class="close material-icons">close</i></div>
+          </div>
+          <div class="card-panel" style="margin-top:1rem">
+            <div class="row center-align" style="margin:0">
+              <div class="col s4"><h5 style="margin:0">2,400+</h5><span class="grey-text">Lorem</span></div>
+              <div class="col s4"><h5 style="margin:0">24h</h5><span class="grey-text">Ipsum</span></div>
+              <div class="col s4"><h5 style="margin:0">4.9★</h5><span class="grey-text">Dolor</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="label-tag">Carousel (drag or swipe it)</p>
+      <div class="carousel">
+        <a class="carousel-item"><div class="teal">🏡<small style="font-size:1rem">Lorem</small></div></a>
+        <a class="carousel-item"><div class="amber darken-2">🏢<small style="font-size:1rem">Ipsum</small></div></a>
+        <a class="carousel-item"><div class="blue-grey">🏘️<small style="font-size:1rem">Dolor</small></div></a>
+        <a class="carousel-item"><div class="red lighten-1">🏚️<small style="font-size:1rem">Sit amet</small></div></a>
+        <a class="carousel-item"><div class="indigo">🏰<small style="font-size:1rem">Consectetur</small></div></a>
+      </div>
+
+      <p class="label-tag">Breadcrumb · Pagination</p>
+      <nav class="teal lighten-1"><div class="nav-wrapper" style="padding:0 1rem"><a href="#!" class="breadcrumb">Home</a><a href="#!" class="breadcrumb">Reports</a><a href="#!" class="breadcrumb">Lorem Ipsum St.</a></div></nav>
+      <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active teal"><a href="#!">1</a></li><li class="waves-effect"><a href="#!">2</a></li><li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    </section>
+
+    <!-- Button gallery -->
+    <section class="section">
+      <h4>Buttons &amp; Badges</h4>
+      <p>
+        <a class="btn teal waves-effect waves-light">Primary</a>
+        <a class="btn blue-grey waves-effect waves-light">Secondary</a>
+        <a class="btn green waves-effect waves-light">Success</a>
+        <a class="btn amber darken-2 waves-effect waves-light">Warning</a>
+        <a class="btn red waves-effect waves-light">Danger</a>
+        <a class="btn-flat waves-effect">Flat</a>
+        <a class="btn-floating waves-effect waves-light teal"><i class="material-icons">add</i></a>
+        <a class="btn-large waves-effect waves-light teal"><i class="material-icons left">cloud</i>Large</a>
+      </p>
+      <p>
+        <span class="new badge green left" style="margin-right:.5rem" data-badge-caption="Pass"></span>
+        <span class="new badge amber darken-2 left" style="margin-right:.5rem" data-badge-caption="Monitor"></span>
+        <span class="new badge red left" style="margin-right:.5rem" data-badge-caption="Repair"></span>
+        <span class="new badge blue left" style="margin-right:.5rem" data-badge-caption="Licensed"></span>
+      </p>
+      <div style="clear:both;padding-top:1rem"><div class="preloader-wrapper small active"><div class="spinner-layer spinner-green-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div> <span class="grey-text" style="vertical-align:super;margin-left:.5rem">Loading spinner (preloader)</span></div>
+    </section>
+
+    <!-- Prompts for the AI agent (part of the explorer, not the demo site) -->
+    <section class="section">
+      <div class="card-panel grey lighten-3">
+        <h5>💡 Try this with your AI agent</h5>
+        <p class="grey-text">Copy a prompt and paste it into your AI coding agent.</p>
+        <div class="card-panel white prompt-row" data-prompt><code class="prompt-text">Make a copy of the Materialize page that uses a deep purple and amber color scheme.</code><a class="btn-small teal copy">Copy</a></div>
+        <div class="card-panel white prompt-row" data-prompt><code class="prompt-text">Make a copy of the Materialize page with a big parallax photo at the top and a floating "Book now" button in the bottom corner.</code><a class="btn-small teal copy">Copy</a></div>
+        <div class="card-panel white prompt-row" data-prompt><code class="prompt-text">Using Materialize, make a mobile-app-style page for inspectors with a list of today's jobs, using collections and a bottom navigation bar.</code><a class="btn-small teal copy">Copy</a></div>
+        <div class="card-panel white prompt-row" data-prompt><code class="prompt-text">Rebuild the Materialize page with the same content but in Bootstrap, so I can compare the two side by side.</code><a class="btn-small teal copy">Copy</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating action button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large amber darken-2"><i class="large material-icons">phone</i></a>
+    <ul>
+      <li><a class="btn-floating teal"><i class="material-icons">email</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">event</i></a></li>
+    </ul>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content"><h4>Lorem ipsum</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a Materialize modal, a pop-up window built into the framework.</p></div>
+    <div class="modal-footer"><a href="#!" class="modal-close waves-effect btn-flat">Close</a><a href="#!" class="modal-close waves-effect btn teal">Got it</a></div>
+  </div>
+
+  <footer class="page-footer teal darken-2">
+    <div class="footer-copyright"><div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem">
+      <span>© 2026 Keystone Inspections · Lorem ipsum dolor sit amet</span><span>Built with Materialize 1.0</span>
+    </div></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Turn on all of Materialize's interactive pieces (menus, tabs, pop-ups, carousel, etc.)
+    M.AutoInit();
+    document.getElementById('bookForm').onsubmit = function (e) { e.preventDefault(); M.toast({ html: 'This is a demo form. Nothing was sent.' }); };
+
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.closest('[data-prompt]').querySelector('.prompt-text').innerText;
+        var done = function () { M.toast({ html: 'Copied! Paste it into your AI agent.' }); };
+        if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done); }
+        else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); done(); }
+      });
+    });
+  </script>
+  <!-- 🎨 Style picker: change fonts, colours and borders (explorer tool, delete this line to remove) -->
+  <script src="../shared/style-picker.js" data-framework="materialize"></script>
+</body>
+</html>
