@@ -2,6 +2,10 @@
 
 See how five web design toolkits (Bootstrap, Tailwind, Bulma, Materialize, Foundation) look, and try new designs with your AI coding agent.
 
+## First-time setup
+
+New to this? Follow the step-by-step **[setup guide for Windows](docs/setup.md)**. It shows how to open PowerShell, install everything, download the project and start your AI agent. Every command has a copy button.
+
 ## Getting started
 
 1. Double-click **`index.html`** to open it in your web browser. You need to be online.
